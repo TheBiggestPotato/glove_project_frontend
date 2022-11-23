@@ -1,0 +1,45 @@
+@use "../../constants/colors.scss";
+@use "../../fonts/fonts.scss";
+
+.btn {
+    font-family: fonts.$crimson-text-bold;
+    border-radius: 360px;
+    text-align: center;
+    &--first {
+        background-color: colors.$app-blue;
+        border-color: colors.$app-blue ;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+
+        &:hover {
+            background-color: colors.$darker-blue;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    &--second {
+        background-color: white;
+        color: colors.$app-blue;
+        border-style: solid;
+        padding: 8px 15px;
+
+        &:hover {
+            border-color: colors.$app-blue;
+        }
+    }
+
+    &--third {
+        background-color: transparent;
+        color: white;
+        padding: 8px 15px;
+        border-style: solid;
+
+        &:hover {
+            border-color: white;
+        }
+    }
+}
