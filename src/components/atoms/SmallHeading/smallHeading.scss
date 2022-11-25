@@ -1,11 +1,10 @@
 @use "../../../constants/colors.scss";
 @use "../../../fonts/fonts.scss";
 
-.bigHeading {
-    font-family: fonts.$crimson-text-bold;
+.smallHeading {
+    font-family: fonts.$crimson-text;
+    margin-right: 80%;
     font-weight: 400;
-    font-size: 2.5rem;
-    line-height: 1rem;
 
     &--black {
         color: black;
