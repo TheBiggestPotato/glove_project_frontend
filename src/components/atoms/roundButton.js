@@ -1,5 +1,5 @@
 import React from "react";
-import "./roundButton.scss";
+import "./styles/roundButton.scss";
 
 function RoundButton(props) {
   const { buttonType, label, disabled, onClick } = props;

@@ -1,19 +1,22 @@
-@use "../../constants/colors.scss";
-@use "../../fonts/fonts.scss";
+@use "../../../constants/colors";
+@use "../../../fonts/fonts";
 
 .btn {
     font-family: fonts.$crimson-text-bold;
-    border-radius: 360px;
+    border-radius: 25rem;
     text-align: center;
+    font-size: 1.25rem;
+
     &--first {
         background-color: colors.$app-blue;
         border-color: colors.$app-blue ;
         color: white;
         border: none;
-        padding: 8px 15px;
+        padding: 0.625rem 1.25rem;
 
         &:hover {
             background-color: colors.$darker-blue;
+            transition-duration: 0.5s;
         }
 
         &:active {
@@ -25,17 +28,19 @@
         background-color: white;
         color: colors.$app-blue;
         border-style: solid;
-        padding: 8px 15px;
+        padding: 0.625rem 1.25rem;
+        border-color: white;
 
         &:hover {
             border-color: colors.$app-blue;
+            transition-duration: 0.5s;
         }
     }
 
     &--third {
         background-color: transparent;
         color: white;
-        padding: 8px 15px;
+        padding: 0.625rem 1.25rem;
         border-style: solid;
 
         &:hover {

@@ -1,0 +1,29 @@
+@use "src/constants/colors";
+
+.nav {
+  width: 100vw;
+  height: 6.25rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+
+  .nav__menu {
+    display: flex;
+    margin-top: 0.625rem;
+    margin-right: 5.625rem;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav__logo {
+    margin-left: 6.25rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+
+    img {
+      width: 9.375rem;
+      height: 4.688rem;
+    }
+  }
+}
