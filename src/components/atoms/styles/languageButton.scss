@@ -1,9 +1,9 @@
-#languageBtn {
+.languageBtn {
   border: none;
   background-color: white;
 
 
-  #languageBtn--img {
+  &--first {
     width: 2.5rem;
     height: 1.875rem;
   }

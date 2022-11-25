@@ -9,7 +9,7 @@ export default function LanguageButton (props) {
 
     //TODO - finish the function when working on localization
 
-    const {onClick} = props
+    const {onClick, buttonType} = props
 
     const handleClick = (e) => {
         if (onClick) {
@@ -19,7 +19,7 @@ export default function LanguageButton (props) {
 
     return (
         <>
-            <button type="button" id={'languageBtn'}><img src={ukFlag} alt="languageFlag" onClick={handleClick} id={'languageBtn--img'}/></button>
+            <button type="button" className={'languageBtn'}><img src={ukFlag} alt="languageFlag" onClick={handleClick} className={`languageBtn languageBtn--${buttonType}`}/></button>
         </>
     )
 }
