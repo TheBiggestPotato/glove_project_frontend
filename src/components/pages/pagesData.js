@@ -1,10 +1,11 @@
+import Home from "./Home/Home.js";
+
 const pagesData = [
-  // example pageData
-  // {
-  //   path: "",
-  //   element: <Home />,
-  //   title: "home"
-  // }
+  {
+    path: "/home",
+    element: <Home />,
+    title: "home",
+  },
 ];
 
 export default pagesData;
