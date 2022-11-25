@@ -5,9 +5,9 @@ const BigHeading = (props) => {
   const { content, color } = props;
 
   return (
-    <div className={`bigHeading bigHeading--${color}`}>
-      <h1>{content}</h1>
-    </div>
+    <>
+      <h1 className={`bigHeading bigHeading--${color}`}>{content}</h1>
+    </>
   );
 };
 
