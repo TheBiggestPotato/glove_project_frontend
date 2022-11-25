@@ -1,0 +1,14 @@
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
+
+.bigHeading {
+    font-family: fonts.$crimson-text;
+
+    &--black {
+        color: black;
+    }
+
+    &--blue {
+        color: colors.$app-blue;
+    }
+}
