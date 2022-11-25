@@ -1,0 +1,7 @@
+@use "../../../constants/colors.scss";
+
+.line {
+    background-color: colors.$app-blue;
+    border-width: 0;
+    float: left;
+}
