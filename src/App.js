@@ -4,12 +4,15 @@ import "./App.scss";
 import "./fonts/CrimsonText-Regular.ttf";
 import "./fonts/CrimsonText-Bold.ttf";
 
-function App() {
+import { BrowserRouter } from "react-router-dom";
+import Router from "./components/pages/router";
+
+const App = () => {
   return (
-    <div className="App">
-      <Nav />
-    </div>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
