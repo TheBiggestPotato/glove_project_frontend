@@ -1,0 +1,16 @@
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
+
+.smallHeading {
+    font-family: fonts.$crimson-text;
+    margin-right: 80%;
+    font-weight: 400;
+
+    &--black {
+        color: black;
+    }
+
+    &--blue {
+        color: colors.$app-blue;
+    }
+}
