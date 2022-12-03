@@ -11,10 +11,11 @@ export default function Glove3D(props) {
         gloveRef.current.rotation.z += 0.005;
     });
 
-      return (
+
+    return (
         <group {...props} dispose={null} scale={0.02}>
           <mesh
-              ref={gloveRef}
+                ref={gloveRef}
                 geometry={nodes.GloveNitrile.geometry}
                 material={materials.GloveNitrile_vray}
                 position={[20, 10, 20]}
