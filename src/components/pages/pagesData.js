@@ -1,11 +1,18 @@
-import Home from "./Home/Home.js";
+import Product from "./product/product";
+import Home from "./Home/Home";
 
 const pagesData = [
-  {
-    path: "/home",
-    element: <Home />,
-    title: "home",
-  },
+    {
+      path: "",
+      element: <Home />,
+      title: "home"
+    },
+
+    {
+        path: 'product',
+        element: <Product />,
+        title: 'product'
+    }
 ];
 
 export default pagesData;
