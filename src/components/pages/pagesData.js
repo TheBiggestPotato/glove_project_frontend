@@ -1,5 +1,5 @@
 import Product from "./product/product";
-import Home from "./home/home";
+import Home from "./Home/Home";
 
 const pagesData = [
     {

@@ -2,7 +2,7 @@ import React from "react";
 
 import './product.scss'
 
-import Nav from "../../organism/Nav/nav";
+import Nav from '../../organisms/Nav/nav'
 
 import Glove3D from "../../atoms/glove3D/glove3D";
 
