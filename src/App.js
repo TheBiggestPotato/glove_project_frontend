@@ -1,5 +1,3 @@
-import Nav from "./components/organism/Nav/nav";
-
 import "./App.scss";
 import "./fonts/CrimsonText-Regular.ttf";
 import "./fonts/CrimsonText-Bold.ttf";
