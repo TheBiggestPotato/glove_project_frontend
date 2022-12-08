@@ -2,7 +2,7 @@ import React from "react";
 import "./roundButton.scss";
 
 function RoundButton(props) {
-  const { buttonType, label, disabled, onClick } = props;
+  const { buttonType, label, disabled, onClick, padding, fontSize } = props;
 
   const handleClick = (e) => {
     if (onClick) {
@@ -12,7 +12,12 @@ function RoundButton(props) {
 
   return (
     <>
-      <button className={`btn btn--${buttonType}`} onclick={handleClick}>
+      <button className={`btn btn--${buttonType}`} onClick={handleClick} 
+      style={{ 
+        padding: `${padding}`,
+        fontSize: `${fontSize}`
+      }}
+      >
         {label}
       </button>
     </>

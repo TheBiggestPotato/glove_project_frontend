@@ -1,0 +1,7 @@
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
+
+.coloredWordText {
+  font-family: fonts.$crimson-text;
+  margin-bottom: 5px;
+}

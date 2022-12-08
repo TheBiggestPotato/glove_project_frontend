@@ -1,4 +1,4 @@
-import Product from "./product/product";
+import Product from "./Product/product";
 import Home from "./Home/Home";
 
 const pagesData = [

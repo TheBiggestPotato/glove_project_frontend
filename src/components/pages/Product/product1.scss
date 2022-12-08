@@ -1,0 +1,122 @@
+@use "../../../constants/colors";
+@use "../../../fonts/fonts.scss";
+
+.product__body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  .product__firstLine{
+    display: flex;
+    justify-content: space-evenly;
+    width: 99.7vw;
+
+    .canvas {
+      height: 30.313rem;
+      width: 43.75rem;
+      max-width: 100%;
+      margin-top: 4.688rem;
+      border-style: solid;
+      border-radius: 6.25rem;
+      border-width: 0.125rem;
+      border-color: colors.$app-blue;
+    }
+
+    .product__characteristics {
+      display: block;
+      width: 36.625rem;
+      height: 30.313rem;
+      margin-top: 8.75rem;
+
+      h2 {
+        font-size: 2.188rem;
+        margin-top: 0.006rem;
+        margin-bottom: 0.313rem;
+      }
+
+      .product__characteristics__paragraph {
+        margin-top: 0.625rem;
+
+        span {
+          display: block;
+          margin-top: 0.75rem;
+        }
+
+        span::first-letter {
+          color: colors.$app-blue;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .product__secondLine {
+    display: flex;
+    justify-content: space-evenly;
+    width: 99.7vw;
+
+    .product__description {
+      margin-top: 6.25rem;
+      width: 43.75rem;
+      font-size: 1.375rem;
+    }
+
+    .product_boxImage {
+        margin-top: 3.125rem;
+
+      .boxProductBorder{
+        position: relative;
+        height: 23.125rem;
+        width: 37.5rem;
+        border-style: solid;
+        border-radius: 6.25rem;
+        border-width: 0.125rem;
+        color: colors.$app-blue;
+      }
+
+      img {
+        position: absolute;
+        height: 28.125rem;
+        top: 45.313rem;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .product__thirdLine {
+    width: 93.75rem;
+    margin-left: 12.5rem;
+    margin-top: 4.688rem;
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+
+  .product__fourthLine {
+    margin-top: 4.688rem;
+    width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+    .advantages {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        margin-top: 0.625rem;
+        margin-bottom: 0.625rem;
+        font-size: 1.375rem;
+      }
+    }
+
+    button {
+      margin-top: 1.25rem;
+    }
+  }
+}
+
+
+
