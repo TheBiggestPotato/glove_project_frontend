@@ -10,7 +10,7 @@ const TabText = () => {
     <div className="tabText">
       <BigHeading color="black" content="Protejam viata" />
       <BigHeading color="black" content="Protejam viitorul" />
-      <Line width="27%" height="2px"></Line>
+      <Line width="27%" height="2rem"></Line>
       <SmallHeading
         color="black"
         content="Producatorul european de manusi de nitril"

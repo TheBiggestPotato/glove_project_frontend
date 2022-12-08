@@ -13,11 +13,11 @@ export default function Nav() {
         <img src={logo} alt={"logo"}></img>
       </div>
       <div className={"nav__menu"}>
-        <RoundButton label={"Home"} buttonType={"second"} />
-        <RoundButton label={"About"} buttonType={"second"} />
-        <RoundButton label={"Product"} buttonType={"second"} />
-        <RoundButton label={"Contact"} buttonType={"second"} />
-        <RoundButton label={"Order"} buttonType={"first"} />
+        <RoundButton label={"Home"} buttonType={"second"} padding='0.625rem 1rem' />
+        <RoundButton label={"About"} buttonType={"second"} padding='0.625rem 1rem'/>
+        <RoundButton label={"Product"} buttonType={"second"} padding='0.625rem 1rem'/>
+        <RoundButton label={"Contact"} buttonType={"second"} padding='0.625rem 1rem'/>
+        <RoundButton label={"Order"} buttonType={"first"} padding='0.625rem 1rem'/>
         <LanguageButton buttonType={"first"} />
       </div>
     </div>

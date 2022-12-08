@@ -12,7 +12,6 @@
         border-color: colors.$app-blue ;
         color: white;
         border: none;
-        padding: 0.625rem 1rem;
 
         &:hover {
             background-color: colors.$darker-blue;
@@ -28,7 +27,6 @@
         background-color: white;
         color: colors.$app-blue;
         border-style: solid;
-        padding: 0.625rem 1rem;
         border-color: white;
 
         &:hover {
@@ -40,7 +38,6 @@
     &--third {
         background-color: transparent;
         color: white;
-        padding: 0.625rem 1rem;
         border-style: solid;
 
         &:hover {

@@ -1,0 +1,12 @@
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
+
+.paragraph {
+    font-family: fonts.$crimson-text;
+    font-size: 22px;
+
+    &--headline {
+        font-size: 25px;
+        border-bottom: 2px solid colors.$app-blue;
+    }
+}
