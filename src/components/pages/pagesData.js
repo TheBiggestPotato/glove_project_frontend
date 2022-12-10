@@ -1,5 +1,6 @@
 import Product from "./Product/product";
 import Home from "./Home/Home";
+import About from './About/about';
 
 const pagesData = [
     {
@@ -12,6 +13,11 @@ const pagesData = [
         path: 'product',
         element: <Product />,
         title: 'product'
+    },
+    {
+      path: 'about',
+      element: <About />,
+      title: 'about'
     }
 ];
 
