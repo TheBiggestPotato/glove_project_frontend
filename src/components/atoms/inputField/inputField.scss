@@ -1,0 +1,10 @@
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
+
+.inputField {
+    font-family: fonts.$crimson-text;
+    font-size: 20px;
+    border-color: colors.$app-blue;
+    border-radius: .625rem;
+    border-width: 1px;
+}
