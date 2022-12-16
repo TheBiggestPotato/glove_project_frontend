@@ -1,12 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import "./roundButton.scss";
 
 function RoundButton(props) {
-  const { buttonType, label, disabled, onClick, padding, fontSize } = props;
+  const { buttonType, label, disabled, onClick, padding, fontSize, route } = props;
+
+  let navigate = useNavigate();
 
   const handleClick = (e) => {
     if (onClick) {
       onClick(e);
+    }
+
+    if (route) {
+      navigate(route)
     }
   };
 
