@@ -1,6 +1,7 @@
 import Product from "./Product/product";
 import Home from "./Home/Home";
 import About from './About/about';
+import Contact from "./Contact/contact";
 
 const pagesData = [
     {
@@ -18,6 +19,11 @@ const pagesData = [
       path: 'about',
       element: <About />,
       title: 'about'
+    },
+    {
+      path: 'contact',
+      element: <Contact />,
+      title: 'contact'
     }
 ];
 

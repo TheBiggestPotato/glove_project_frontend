@@ -3,8 +3,9 @@
 
 .inputField {
     font-family: fonts.$crimson-text;
-    font-size: 20px;
-    border-color: colors.$app-blue;
+    font-size: 1.25rem;
+    border: .1875rem solid colors.$app-blue;
     border-radius: .625rem;
-    border-width: 1px;
+    border-width: .125rem;
+    padding: .3125rem .625rem;
 }

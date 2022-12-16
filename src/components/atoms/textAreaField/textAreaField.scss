@@ -3,8 +3,9 @@
 
 .textAreaField {
     font-family: fonts.$crimson-text;
-    font-size: 20px;
+    font-size: 1.25rem;
     border-color: colors.$app-blue;
     border-radius: .625rem;
-    border-width: 1px;
+    border-width: .125rem;
+    padding: .3125rem .625rem;
 }
