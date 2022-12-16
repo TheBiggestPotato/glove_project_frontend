@@ -1,0 +1,90 @@
+@use "../../../constants/colors";
+@use "../../../fonts/fonts.scss";
+
+.contact__body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+
+    .contact__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3.125rem;
+
+        .contact__form__headline{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            hr {
+                margin-top: -1.25rem;
+            }
+        }
+
+        .contact__form__field {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                margin-top: 2.1875rem;
+            }
+
+            input:focus {
+                outline: none;
+                transition: 0.2s;
+                border: .1875rem solid colors.$darker-blue;
+            }
+
+            textarea:focus {
+                outline: none;
+                transition: 0.2s;
+                border: .1875rem solid colors.$darker-blue;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    
+    }
+
+    .contact__info  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3.125rem;
+        width: 31.25rem;
+
+        hr {
+            margin-top: -1.25rem;
+        }
+
+        .contact__info__section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -0.625rem;
+            height: 18.75rem;
+
+            .contact__info__row {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 3.125rem;
+            
+
+                span {
+                    margin-top: 1.25rem;
+                    font-size: 1.875rem;
+                }
+            }
+        }
+    }
+}

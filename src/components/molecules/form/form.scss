@@ -1,0 +1,28 @@
+.form {
+    width: 43.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1.5625rem;
+
+    .form__firstRow {
+        display: flex;
+
+        input {
+            margin: .625rem;
+        }
+    }
+
+    .form__secondRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            margin: .625rem;
+        } 
+    }
+}
