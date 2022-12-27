@@ -7,15 +7,20 @@ import Paragraph from "../../atoms/Paragraph/paragraph";
 import Line from "../../atoms/Line/line";
 import valuesData from './aboutValuesData';
 import Video from "../../atoms/Video/video";
+import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
 
 import coverPhoto from '../../../assets/images/coverPhotoAboutMockup.png'
 
 import './about.scss';
+import useWindowDimensions from "../../../functions/getWindowDimensions";
 
 export default function About () {
+
+    const { height, width } = useWindowDimensions();
+
     return(
-        <>
-            <Nav />
+        <div className="about">
+            {width < 1200 ? <MobileHeader /> : <Nav />}
             <div className='about__body'>
                 <div className='about__cover'>
                     {/* <img src={coverPhoto} alt='aboutCoverPhoto' /> */}
@@ -35,7 +40,7 @@ export default function About () {
                     {valuesData.map((section) => {
                         return(
                         <div key={section.id} className='about__info__values__headline__section'>
-                        <Line width='21.25rem' height='0.125rem'/>
+                        <Line width={width < 1200 ? '300px' : '340px'} height='0.125rem'/>
                         <BigHeading  content={section.heading}/>
                         <Paragraph content={section.content}/>
                         <br/>
@@ -43,7 +48,7 @@ export default function About () {
                         </div>
                         )
                     })}
-                    <Line width='21.25rem' height='0.125rem'/>
+                    <Line width={width < 1200 ? '300px' : '340px'} height='0.125rem'/>
                     </div>
                     </div>
                 </div>
@@ -56,10 +61,10 @@ export default function About () {
                     />
                     </div>
                     <div className='about__factory__video'>
-                        <Video embedId="jUBx9-OGNEM"/>
+                        <Video embedId="jUBx9-OGNEM" height={width < 1200 ? '200px' : '400px'} width={width < 1200 ? '315px' : '850px'}/>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

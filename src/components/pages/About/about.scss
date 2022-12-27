@@ -1,116 +1,238 @@
-.about__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+@use "../../../constants/colors.scss";
+@use "../../../fonts/fonts.scss";
 
-    .about__cover {
-        #imgMockup {
-            background-color: black;
-            width: 100vw;
-            height: 28.125rem;
-        }
-
-        img {
-            height: 52.5rem; 
-        }
-    }
-
-    .about__info {
-        margin-top: 3.125rem;
-
-        .about__info__vision {
-            width: 53.125rem;
-            height: 14.938rem;
-
-            h2 {
-                font-size: 1.25rem;
-                font-weight: normal;
-                margin-bottom: 0.625rem;
-            }
-
-            span {
-                font-size: 1.875rem;
-                line-height: 2.188rem;
-            }
-            
-        }
-
-        .about__info__values {
-            margin-top: 4.375rem;
-
-            h2 {
-                font-size: 1.25rem;
-                font-weight: normal;
-                margin-bottom: .625rem;
-            }
-
-            span {
-                font-size: 1.875rem;
-                line-height: 2.1875rem;
-            }
-
-            .about__info__values__headline {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 3.125rem; 
-
-                .about__info__values__headline__section{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 32.125rem;
-
-                h1 {
-                    font-size: 3.125rem;
-                }
-
-                span {
-                    font-size: 1.25rem;
-                    text-align: center;
-                }
-
-            }
-            }
-        }
-    }
-
-    .about__factory {
+@media only screen and (min-width: 1200px) {
+    .about__body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 3.125rem;
+        width: 100vw;
 
-        .about__factory__cover {
-            background-color: black;
-            width: 100vw;
-            height: 28.125rem;
-        }
-
-        .about__factory__info {
-            width: 53.125rem;
-            height: 20.25rem;
-            margin-top: 3.125rem;
-
-            h2 {
-                font-size: 1.25rem;
-                font-weight: normal;
-                margin-bottom: .625rem;
+        .about__cover {
+            #imgMockup {
+                background-color: black;
+                width: 100vw;
+                height: 28.125rem;
             }
 
-            span {
-                font-size: 1.875rem;
-                line-height: 2.1875rem;
+            img {
+                height: 52.5rem; 
             }
         }
 
-        .about__factory__video {
+        .about__info {
             margin-top: 3.125rem;
+
+            .about__info__vision {
+                width: 53.125rem;
+                height: 14.938rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                    margin-bottom: 0.625rem;
+                }
+
+                span {
+                    font-size: 1.875rem;
+                    line-height: 2.188rem;
+                }
+                
+            }
+
+            .about__info__values {
+                margin-top: 4.375rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                    margin-bottom: .625rem;
+                }
+
+                span {
+                    font-size: 1.875rem;
+                    line-height: 2.1875rem;
+                }
+
+                .about__info__values__headline {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 3.125rem; 
+
+                    .about__info__values__headline__section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 32.125rem;
+
+                    h1 {
+                        font-size: 3.125rem;
+                    }
+
+                    span {
+                        font-size: 1.25rem;
+                        text-align: center;
+                    }
+
+                }
+                }
+            }
+        }
+
+        .about__factory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3.125rem;
+
+            .about__factory__cover {
+                background-color: black;
+                width: 100vw;
+                height: 28.125rem;
+            }
+
+            .about__factory__info {
+                width: 53.125rem;
+                height: 20.25rem;
+                margin-top: 3.125rem;
+
+                h2 {
+                    font-size: 1.25rem;
+                    font-weight: normal;
+                    margin-bottom: .625rem;
+                }
+
+                span {
+                    font-size: 1.875rem;
+                    line-height: 2.1875rem;
+                }
+            }
+
+            .about__factory__video {
+                margin-top: 3.125rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about__body {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100vw;
+
+        .about__cover {
+            #imgMockup {
+                background-color: black;
+                width: 100vw;
+                height: 250px;
+            }
+
+            img {
+                height: 52.5rem; 
+            }
+        }
+
+        .about__info {
+            margin-top: 25px;
+
+            .about__info__vision {
+                padding: 0px 30px;
+
+                h2 {
+                    font-size: 15px;
+                    font-weight: normal;
+                    margin-bottom: 0.625rem;
+                }
+
+                span {
+                    font-size: 20px;
+                    line-height: 2.188rem;
+                }
+                
+            }
+
+            .about__info__values {
+                margin-top: 50px;
+                padding: 0px 30px;
+
+                h2 {
+                    font-size: 15px;
+                    font-weight: normal;
+                    margin-bottom: .625rem;
+                }
+
+                span {
+                    font-size: 20px;
+                    line-height: 2.1875rem;
+                }
+
+                .about__info__values__headline {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 3.125rem; 
+
+                    .about__info__values__headline__section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                }
+                }
+            }
+        }
+
+        .about__factory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3.125rem;
+
+            .about__factory__cover {
+                background-color: black;
+                width: 100vw;
+                height: 250px;
+            }
+
+            .about__factory__info {
+                height: 20.25rem;
+                margin-top: 3.125rem;
+                padding: 0px 30px;
+
+                h2 {
+                    font-size: 15px;
+                    font-weight: normal;
+                    margin-bottom: .625rem;
+                }
+
+                span {
+                    font-size: 20px;
+                    line-height: 2.1875rem;
+                }
+            }
+
+            .about__factory__video {
+                margin-top: 200px;
+            }
         }
     }
 }
