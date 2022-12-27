@@ -16,8 +16,6 @@ export default function MobileHeader () {
 
     const scrollDirection = useScrollDirection()
 
-    console.log(scrollDirection)
-
     const [sidebar, setSidebar] = useState(false)
 
     const showSidebar = () => setSidebar(!sidebar)
