@@ -24,7 +24,7 @@ export default function Product () {
 
     return (
         <div className="product">
-          {width < 1200 ? <MobileHeader /> : <Nav />}
+          {width <= 992 ? <MobileHeader /> : <Nav />}
             <div className={'product__body'}>
             <div className={'product__headline'}>
             <SmallHeading color='blue' content='PPS Medical - Manusi de nitril'/>
@@ -63,7 +63,7 @@ export default function Product () {
             </div>
             </div>
             </div>
-            <Line width={width < 1200 ? '150px': '640px'} height={width < 1200 ? '2px' : '3px'}/>
+            <Line width={width <= 992 ? '150px': '640px'} height={width < 992 ? '2px' : '3px'}/>
             <div className={'product__secondLine'}>
                 <div className={'product__description'}>
                     <ColoredWordText
@@ -96,7 +96,6 @@ export default function Product () {
                     />
                 </div>
                 <div className={"product_boxImage"}>
-                    <div className='boxProductBorder'></div>
                     <img src={boxProduct} alt={"logo"}></img>
                 </div>
             </div>
@@ -112,14 +111,14 @@ export default function Product () {
                 </div>
                 <div className={'product__fourthLine'}>
                     <div className="advantages">
-                    <Line width={width < 1200 ? '266px': '640px'} height={width < 1200 ? '2px' : '3px'} />
+                    <Line width={width < 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
                     <BigHeading color='blue' fontWeight='bold' content={'Avantaje'} />
                     <Paragraph content='Produs fabricat in UE' />
                     <Paragraph content='Stocuri disponibile imediat' />
                     <Paragraph content='Livrare rapida si sigura' />
                     <Paragraph content='Calitate înaltă și prețuri competitive' />
                     <br/>
-                    <Line width={width < 1200 ? '266px': '640px'} height={width < 1200 ? '2px' : '3px'} />
+                    <Line width={width <= 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
                     </div>
                     <br/>
                     <RoundButton buttonType={'first'} label={'Contact'} padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'}/>
