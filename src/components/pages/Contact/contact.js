@@ -1,7 +1,7 @@
 import React from "react";
 
 import BigHeading from "../../atoms/BigHeading/bigHeading";
-import Nav from "../../organisms/Nav/nav";
+import Nav from "../../organisms/Nav/desktopNav/nav";
 import Line from "../../atoms/Line/line";
 import Form from "../../molecules/form/form";
 import RoundButton from "../../atoms/RoundButton/roundButton";
