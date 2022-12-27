@@ -63,7 +63,9 @@ export default function Product () {
             </div>
             </div>
             </div>
+            <div className="product__thematicBrake">
             <Line width={width <= 992 ? '150px': '640px'} height={width < 992 ? '2px' : '3px'}/>
+            </div>
             <div className={'product__secondLine'}>
                 <div className={'product__description'}>
                     <ColoredWordText

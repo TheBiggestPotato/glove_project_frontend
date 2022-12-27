@@ -20,7 +20,7 @@ export default function About () {
 
     return(
         <div className="about">
-            {width < 1200 ? <MobileHeader /> : <Nav />}
+            {width < 992 ? <MobileHeader /> : <Nav />}
             <div className='about__body'>
                 <div className='about__cover'>
                     {/* <img src={coverPhoto} alt='aboutCoverPhoto' /> */}
@@ -40,7 +40,7 @@ export default function About () {
                     {valuesData.map((section) => {
                         return(
                         <div key={section.id} className='about__info__values__headline__section'>
-                        <Line width={width < 1200 ? '300px' : '340px'} height='0.125rem'/>
+                        <Line width={width < 922 ? '300px' : '340px'} height='0.125rem'/>
                         <BigHeading  content={section.heading}/>
                         <Paragraph content={section.content}/>
                         <br/>
@@ -48,7 +48,7 @@ export default function About () {
                         </div>
                         )
                     })}
-                    <Line width={width < 1200 ? '300px' : '340px'} height='0.125rem'/>
+                    <Line width={width < 922 ? '300px' : '340px'} height='0.125rem'/>
                     </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default function About () {
                     />
                     </div>
                     <div className='about__factory__video'>
-                        <Video embedId="jUBx9-OGNEM" height={width < 1200 ? '200px' : '400px'} width={width < 1200 ? '315px' : '850px'}/>
+                        <Video embedId="jUBx9-OGNEM"/>
                     </div>
                 </div>
             </div>
