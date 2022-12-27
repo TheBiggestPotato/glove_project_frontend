@@ -1,6 +1,6 @@
 import React from "react";
 
-import Nav from "../../organisms/Nav/nav";
+import Nav from "../../organisms/Nav/desktopNav/nav";
 import SmallHeading from "../../atoms/SmallHeading/smallHeading";
 import BigHeading from "../../atoms/BigHeading/bigHeading";
 import Paragraph from "../../atoms/Paragraph/paragraph";

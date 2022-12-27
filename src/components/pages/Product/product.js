@@ -1,8 +1,10 @@
 import React from "react";
 
 import './product.scss'
+import useWindowDimensions from "../../../functions/getWindowDimensions";
 
-import Nav from '../../organisms/Nav/nav'
+import Nav from '../../organisms/Nav/desktopNav/nav'
+import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
 import Glove3D from '../../atoms/glove3D/glove3D';
 import ColoredWordText from "../../atoms/coloredWordText/coloredWordText";
 import BigHeading from "../../atoms/BigHeading/bigHeading";
@@ -11,16 +13,22 @@ import Line from '../../atoms/Line/line';
 import RoundButton from "../../atoms/RoundButton/roundButton";
 import Paragraph from "../../atoms/Paragraph/paragraph";
 
-import boxProduct from "../../../assets/images/boxProduct.png";
+import boxProduct from "../../../assets/images/boxProduct.png"; 
 
 import { Canvas } from "@react-three/fiber";
 import logo from "../../../assets/images/logo.png";
 
 export default function Product () {
+
+    const { height, width } = useWindowDimensions();
+
     return (
-        <>
-          <Nav />
+        <div className="product">
+          {width < 1200 ? <MobileHeader /> : <Nav />}
             <div className={'product__body'}>
+            <div className={'product__headline'}>
+            <SmallHeading color='blue' content='PPS Medical - Manusi de nitril'/>
+            </div>
             <div className={'product__firstLine'}>
             <div className={'canvas'}>
             <Canvas >
@@ -33,17 +41,29 @@ export default function Product () {
             </Canvas>
             </div>
             <div className={'product__characteristics'}>
-            <SmallHeading color='blue' content='PPS Medical - Manusi de nitril'/>
             <Paragraph type='headline' content='Caracteristici' />
             <div className={'product__characteristics__paragraph'}>
+            <ol>
+            <li>
             <Paragraph content={'Se imbraca usor si nu aluneca.'} />
+            </li>
+            <li>
             <Paragraph content={'Compozitia din nitril si absenta pudrei de amidon reduc riscul de hipersensibilitate si reactii alergice, ce se manifesta uneori la amidon sau latex datorita materialului confera un confort sporit.'}/>
+            </li>
+            <li>
             <Paragraph content={'Manseta cu bordura face ca manusa sa nu alunece sau sa se ruleze.'} />
+            </li>
+            <li>
             <Paragraph content={'Protejeaza de substante nedorite sau periculoase.'} />
+            </li>
+            <li>
             <Paragraph content={'Suprafata texturata de la degete imbunatateste aderenta la corpurile uscate sau umede.'} />
+            </li>
+            </ol>
             </div>
             </div>
             </div>
+            <Line width={width < 1200 ? '150px': '640px'} height={width < 1200 ? '2px' : '3px'}/>
             <div className={'product__secondLine'}>
                 <div className={'product__description'}>
                     <ColoredWordText
@@ -92,19 +112,19 @@ export default function Product () {
                 </div>
                 <div className={'product__fourthLine'}>
                     <div className="advantages">
-                    <Line width='400px' height='3px' />
+                    <Line width={width < 1200 ? '266px': '640px'} height={width < 1200 ? '2px' : '3px'} />
                     <BigHeading color='blue' fontWeight='bold' content={'Avantaje'} />
                     <Paragraph content='Produs fabricat in UE' />
                     <Paragraph content='Stocuri disponibile imediat' />
                     <Paragraph content='Livrare rapida si sigura' />
                     <Paragraph content='Calitate înaltă și prețuri competitive' />
                     <br/>
-                    <Line width='400px' height='3px' />
+                    <Line width={width < 1200 ? '266px': '640px'} height={width < 1200 ? '2px' : '3px'} />
                     </div>
                     <br/>
-                    <RoundButton buttonType={'first'} label={'Contact'} padding='15px 60px' fontSize='22px'/>
+                    <RoundButton buttonType={'first'} label={'Contact'} padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'}/>
                 </div>
             </div>
-        </>
+        </div>
     )
 };

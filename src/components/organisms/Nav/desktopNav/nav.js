@@ -1,9 +1,9 @@
 import React from "react";
 
-import RoundButton from "../../atoms/RoundButton/roundButton";
-import LanguageButton from "../../atoms/LanguageButton/languageButton";
+import RoundButton from "../../../atoms/RoundButton/roundButton";
+import LanguageButton from "../../../atoms/LanguageButton/languageButton";
 
-import logo from "../../../assets/images/logo.png";
+import logo from "../../../../assets/images/logo.png";
 
 import "./nav.scss";
 

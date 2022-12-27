@@ -1,5 +1,6 @@
 @use "src/constants/colors";
 
+@media only screen and (min-width: 1200px) {
 .nav {
   width: 100vw;
   height: 6.25rem;
@@ -27,4 +28,5 @@
       height: 4.688rem;
     }
   }
+}
 }

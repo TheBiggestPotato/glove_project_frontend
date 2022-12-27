@@ -1,0 +1,90 @@
+@use "../../../../constants/colors.scss";
+@use "../../../../fonts/fonts.scss";
+
+.header {
+    display: flex;
+    position: sticky;
+    background-color: white;
+    z-index: 9999;
+    width: 100vw;
+    border-bottom: 3px solid colors.$app-blue;
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    height: 80px;
+    top: 0;
+
+    .header__logo {
+        margin-left: 20px;
+        margin-top: 10px;
+
+        img {
+            width: 150px;
+            height: 60px;
+        }
+    }
+
+    .mobileNav {
+        width: 50px;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        transition: 0.5s;
+        
+        .mobileNav__burgerIcon {
+            display: block;
+            position: absolute;
+            background: none;
+            border: none;
+            font-size: 30px;
+            margin-right: 5px;
+            margin-top: 29px;
+            right: 0;
+            color: black;
+        }
+    
+        .mobileNav__list {
+            display: none;
+            transition: 1s;
+        }
+    }
+    
+    .active {
+        height: 100vh;
+        width: 60%;
+        transition: all 0.5s;
+        background-color: white;
+    
+        .mobileNav__list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            list-style: none;
+            margin-top: 100px;
+            transition: 1s;
+            margin-right: 65px;
+    
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                font-family: fonts.$crimson-text;
+                font-size: 25px;
+            }
+    
+            li {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.header.hide {
+    top: -80px;
+}
+
+.header.show {
+    height: 80px;
+}
