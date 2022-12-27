@@ -1,32 +1,63 @@
 @use "src/constants/colors";
 
 @media only screen and (min-width: 1200px) {
-.nav {
-  width: 100vw;
-  height: 6.25rem;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.188rem solid colors.$app-blue;
-
-  .nav__menu {
+  .nav {
+    width: 100vw;
+    height: 6.25rem;
+    background-color: white;
     display: flex;
-    margin-top: 0.625rem;
-    margin-right: 10.625rem;
-    gap: 2.688rem;
-    align-items: center;
-  }
+    justify-content: space-between;
+    border-bottom: 0.188rem solid colors.$app-blue;
 
-  .nav__logo {
-    margin-left: 6.25rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.625rem;
+    .nav__menu {
+      display: flex;
+      margin-top: 0.625rem;
+      margin-right: 100px;
+      gap: 2.688rem;
+      align-items: center;
+    }
 
-    img {
-      width: 9.375rem;
-      height: 4.688rem;
+    .nav__logo {
+      margin-left: 6.25rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.625rem;
+
+      img {
+        width: 9.375rem;
+        height: 4.688rem;
+      }
     }
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav {
+    width: 100vw;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.188rem solid colors.$app-blue;
+
+    .nav__menu {
+      display: flex;
+      margin-top: 0.625rem;
+      margin-right: 50px;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav__logo {
+      margin-left: 6.25rem;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.625rem;
+
+      img {
+        width: 9.375rem;
+        height: 4.688rem;
+      }
+    }
+  }
 }
