@@ -1,7 +1,7 @@
 @use "../../../constants/colors";
 @use "../../../fonts/fonts.scss";
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
 .product {
   display: flex;
   flex-direction: column;
@@ -80,6 +80,13 @@
     }
   }
 
+  .product__thematicBrake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: flex;
+  }
+
   .product__secondLine {
     display: flex;
     justify-content: space-evenly;
@@ -104,6 +111,9 @@
   }
 
   .product__thirdLine {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 4;
     width: 93.75rem;
     margin-left: 12.5rem;
     margin-top: 4.688rem;
@@ -139,7 +149,7 @@
 }
 }
 
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  @media only screen and (min-width: 992px) and (max-width: 1400px) {
     .product {
       display: flex;
       flex-direction: column;
@@ -215,6 +225,13 @@
             }
           }
         }
+      }
+
+      .product__thematicBrake {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: flex;
       }
     
       .product__secondLine {
@@ -292,6 +309,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 15px;
+        width: 100vw;
         
         .canvas {
           height: 300px;
@@ -308,9 +326,10 @@
           align-items: center;
           justify-content: center;
           margin-top: 30px;
+          width: 100vw;
   
           .product__characteristics__paragraph {
-            width: 100vw;
+        
   
             ol {
               list-style-type: none;
