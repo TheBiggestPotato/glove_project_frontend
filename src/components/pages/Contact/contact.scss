@@ -2,7 +2,7 @@
 @use "../../../fonts/fonts.scss";
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
     .contact__body {
         display: flex;
         width: 100vw;
@@ -101,8 +101,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -0.625rem;
+                margin-top: -15px;
                 height: 18.75rem;
+                border-style: solid;
+                border-radius: 25px;
+                border-color: colors.$app-blue;
+                width: 400px;
+                height: 530px;
 
                 .contact__info__row {
                     display: flex;
@@ -114,6 +119,378 @@
                     span {
                         margin-top: 1.25rem;
                         font-size: 1.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1399px) {
+    .contact__body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: space-evenly;
+
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+            width: 31.25rem;
+
+            .contact__form__headline{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                hr {
+                    margin-top: -1.25rem;
+                }
+            }
+
+            .contact__form__field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .form__firstRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                
+                        input {
+                            margin: .625rem;
+                        }
+                    }
+                
+                    .form__secondRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                
+                        input {
+                            margin: .625rem;
+                        } 
+                    }
+                }
+
+                button {
+                    margin-top: 2.1875rem;
+                }
+
+                input:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                textarea:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+        
+        }
+
+        .contact__info  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+            width: 31.25rem;
+
+            hr {
+                margin-top: -1.25rem;
+            }
+
+            .contact__info__section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -15px;
+                height: 18.75rem;
+                border-style: solid;
+                border-radius: 25px;
+                border-color: colors.$app-blue;
+                width: 400px;
+                height: 530px;
+
+                .contact__info__row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 50px;
+                
+
+                    span {
+                        margin-top: 1.25rem;
+                        font-size: 1.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .contact__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+
+            .contact__form__headline{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                hr {
+                    margin-top: -1.25rem;
+                }
+            }
+
+            .contact__form__field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                
+                    margin-top: 1.5625rem;
+                
+                    .form__firstRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                
+                        input {
+                            margin: .625rem;
+                        }
+                    }
+                
+                    .form__secondRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                
+                        input {
+                            margin: .625rem;
+                        } 
+                    }
+                }
+
+                button {
+                    margin-top: 2.1875rem;
+                }
+
+                input:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                textarea:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+        
+        }
+
+        .contact__info  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3.125rem;
+
+            hr {
+                margin-top: -1.25rem;
+            }
+
+            .contact__info__section {
+                border-style: solid;
+                border-color: colors.$app-blue;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -0.625rem;
+                width: 400px;
+                height: 500px;
+
+                .contact__info__row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 3.125rem;
+                
+
+                    span {
+                        margin-top: 1.25rem;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .contact__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+
+        .contact__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+
+            .contact__form__headline{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                hr {
+                    margin-top: -1.25rem;
+                }
+            }
+
+            .contact__form__field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                
+                    margin-top: 1.5625rem;
+                
+                    .form__firstRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                
+                        input {
+                            margin: .625rem;
+                        }
+                    }
+                
+                    .form__secondRow {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                
+                        input {
+                            margin: .625rem;
+                        } 
+                    }
+                }
+
+                button {
+                    margin-top: 2.1875rem;
+                }
+
+                input:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                textarea:focus {
+                    outline: none;
+                    transition: 0.2s;
+                    border: .1875rem solid colors.$darker-blue;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+        
+        }
+
+        .contact__info  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3.125rem;
+
+            hr {
+                margin-top: -1.25rem;
+            }
+
+            .contact__info__section {
+                border-style: solid;
+                border-color: colors.$app-blue;
+                border-radius: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: -0.625rem;
+                width: 400px;
+                height: 500px;
+
+                .contact__info__row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 3.125rem;
+                
+
+                    span {
+                        margin-top: 1.25rem;
+                        font-size: 25px;
                     }
                 }
             }
@@ -218,17 +595,21 @@
             }
 
             .contact__info__section {
+                border-style: solid;
+                border-color: colors.$app-blue;
+                border-radius: 25px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -0.625rem;
-                height: 18.75rem;
+                margin-top: -15px;
+                width: 300px;
+                height: 400px;
 
                 .contact__info__row {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin-top: 3.125rem;
+                    margin-top: 25px;
                 
 
                     span {
