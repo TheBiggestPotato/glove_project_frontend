@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Nav from "../../organisms/Nav/desktopNav/nav";
 import SmallHeading from "../../atoms/SmallHeading/smallHeading";
@@ -18,6 +19,8 @@ export default function About () {
 
     const { height, width } = useWindowDimensions();
 
+    const { t } = useTranslation();
+
     return(
         <div className="about">
             {width < 992 ? <MobileHeader /> : <Nav />}
@@ -28,21 +31,21 @@ export default function About () {
                 </div>
                 <div className='about__info'>
                     <div className='about__info__vision'>
-                    <SmallHeading content='Viziunea noastra' color='blue'/>
+                    <SmallHeading content={t('vision')} color='blue'/>
                     <Paragraph 
-                    content='Înființată pe fondul unei pandemii la nivel mondial, PPS Manufacturing a luat naștere printr-un apel la acțiune. Un apel pentru a proteja sănătatea oamenilor și bunăstarea planetei noastre prin furnizarea de echipamente de protecție medicală fiabile, în căutarea constantă a unor soluții mai ecologice.'
+                    content={t('visionContent')}
                     />
                     </div>
                     <div className='about__info__values'>
-                    <SmallHeading content='Valorile PPS' color='blue'/>
-                    <Paragraph content='Aceasta este structura culturii noastre și cadrul deciziilor pe care le luam.'/>
+                    <SmallHeading content={t('values')} color='blue'/>
+                    <Paragraph content={t('valuesContent')}/>
                     <div className='about__info__values__headline'>
                     {valuesData.map((section) => {
                         return(
                         <div key={section.id} className='about__info__values__headline__section'>
                         <Line width={width < 922 ? '300px' : '340px'} height='0.125rem'/>
-                        <BigHeading  content={section.heading}/>
-                        <Paragraph content={section.content}/>
+                        <BigHeading  content={t(section.heading)}/>
+                        <Paragraph content={t(section.content)}/>
                         <br/>
                         <br/>
                         </div>
@@ -55,9 +58,9 @@ export default function About () {
                 <div className='about__factory'>
                     <div className='about__factory__cover'/>
                     <div className='about__factory__info'>
-                    <SmallHeading content='Fabrica noastra' color='blue'/>
+                    <SmallHeading content={t('factory')} color='blue'/>
                     <Paragraph 
-                    content='Situată în inima Balcanilor, fabrica noastră, cu sediul în Plovdiv, cuprinde peste 6000 mp. de spațiu de lucru, cu propria noastră linie de producție, proiectată de ingineri experimentați, cu o capacitate de 800 000 de mănuși pe zi. Avem propriul nostru departament de cercetare și dezvoltare, unde sunt dezvoltate și testate noi produse și inovații, ținând cont de obiectivul nostru de a îmbunătății viața oamenilor, protejând în același timp și mediul.'
+                    content={t('factoryContent')}
                     />
                     </div>
                     <div className='about__factory__video'>
