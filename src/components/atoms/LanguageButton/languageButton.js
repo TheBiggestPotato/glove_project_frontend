@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import "./languageButton.scss";
 
 export default function LanguageButton(props) {
-  //TODO - finish the function when working on localization
 
   const { onClick, buttonType } = props;
 
