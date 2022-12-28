@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import BigHeading from "../../atoms/BigHeading/bigHeading";
 import Nav from "../../organisms/Nav/desktopNav/nav";
@@ -20,6 +21,7 @@ import useWindowDimensions from "../../../functions/getWindowDimensions";
 export default function Contact () {
 
     const { height, width } = useWindowDimensions();
+    const { t } = useTranslation();
 
     return(
         <>
@@ -33,19 +35,19 @@ export default function Contact () {
                 <div className='contact__form__field'>
                 <form className='form'>
                     <div className='form__firstRow'>
-                        <InputField placeholder='Nume' type='text' height='30px' width={width < 1400 ? '300px' : '15.313rem'}/>
-                        <InputField placeholder='Telefon' type='number' height='30px'/>
+                        <InputField placeholder={t('name')} type='text' height='30px' width={width < 1400 ? '300px' : '15.313rem'}/>
+                        <InputField placeholder={t('phone')} type='number' height='30px'/>
                     </div>
                     <div className='form__secondRow'>
                         <InputField placeholder='Email' type='email' height='30px' width={width < 1400 ? '300px' : '33.125rem'}/>
-                        <TextAreaField placeholder='Mesaj' width={width < 1400 ? '300px' : '33.125rem'} height='250px'/>
+                        <TextAreaField placeholder={t('message')} width={width < 1400 ? '300px' : '33.125rem'} height='250px'/>
                     </div>
                 </form>
-                <RoundButton label='Trimite' buttonType='first' padding='0.938rem 2.5rem' fontSize='1.375rem' />
+                <RoundButton label={t('send')} buttonType='first' padding='0.938rem 2.5rem' fontSize='1.375rem' />
                 </div>
         </div>
         <div className='contact__info'>
-            <BigHeading content='Unde ne gasiti' color='blue'/>
+            <BigHeading content={t('getInTouch')} color='blue'/>
             <div className='contact__info__section'>
             <IconContext.Provider value={{ color: '#0683B9', size: '45px'}}>
             <div className='contact__info__row'>

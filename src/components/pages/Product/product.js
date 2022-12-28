@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import './product.scss'
 import useWindowDimensions from "../../../functions/getWindowDimensions";
@@ -22,12 +23,14 @@ export default function Product () {
 
     const { height, width } = useWindowDimensions();
 
+    const { t } = useTranslation()
+
     return (
         <div className="product">
           {width <= 992 ? <MobileHeader /> : <Nav />}
             <div className={'product__body'}>
             <div className={'product__headline'}>
-            <SmallHeading color='blue' content='PPS Medical - Manusi de nitril'/>
+            <SmallHeading color='blue' content={t('ppsMedicalNitrileGloves')}/>
             </div>
             <div className={'product__firstLine'}>
             <div className={'canvas'}>
@@ -41,23 +44,26 @@ export default function Product () {
             </Canvas>
             </div>
             <div className={'product__characteristics'}>
-            <Paragraph type='headline' content='Caracteristici' />
+            <Paragraph type='headline' content={t('characteristics')} />
             <div className={'product__characteristics__paragraph'}>
             <ol>
             <li>
-            <Paragraph content={'Se imbraca usor si nu aluneca.'} />
+            <Paragraph content={t('firstCharacteristic')} />
             </li>
             <li>
-            <Paragraph content={'Compozitia din nitril si absenta pudrei de amidon reduc riscul de hipersensibilitate si reactii alergice, ce se manifesta uneori la amidon sau latex datorita materialului confera un confort sporit.'}/>
+            <Paragraph content={t('secondCharacteristic')}/>
             </li>
             <li>
-            <Paragraph content={'Manseta cu bordura face ca manusa sa nu alunece sau sa se ruleze.'} />
+            <Paragraph content={t('thirdCharacteristic')} />
             </li>
             <li>
-            <Paragraph content={'Protejeaza de substante nedorite sau periculoase.'} />
+            <Paragraph content={t('fourthCharacteristic')} />
             </li>
             <li>
-            <Paragraph content={'Suprafata texturata de la degete imbunatateste aderenta la corpurile uscate sau umede.'} />
+            <Paragraph content={t('fifthCharacteristic')} />
+            </li>
+            <li>
+            <Paragraph content={t('sixthCharacteristic')} />
             </li>
             </ol>
             </div>
@@ -69,32 +75,32 @@ export default function Product () {
             <div className={'product__secondLine'}>
                 <div className={'product__description'}>
                     <ColoredWordText
-                    firstWord={'Tip: '}
-                    content={'mănuși de examinare din nitril de 3.5 gr, fără accelerator, fără pulbere, clorinat simplu, nesteril'}
+                    firstWord={t('gloveType')}
+                    content={t('gloveTypeContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Material: '}
-                        content={'100% Latex Nitril Sintetic'}
+                        firstWord={t('gloveMaterial')}
+                        content={t('gloveMaterialContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Culoare: '}
-                        content={'Albastru'}
+                        firstWord={t('gloveColor')}
+                        content={t('gloveColorContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Grosimea palmei: '}
-                        content={'0,07 mm'}
+                        firstWord={t('palmThickness')}
+                        content={t('palmThicknessContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Termen de valabilitate: '}
-                        content={'5 ani (în ambalajul original dacă este depozitat conform ISO 2230)'}
+                        firstWord={t('gloveValidity')}
+                        content={t('gloveValidityContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Stilul de ambalare: '}
-                        content={'100 buc mănuși x 10 cutii x 1 cutie'}
+                        firstWord={t('glovePackaging')}
+                        content={t('glovePackagingContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Marimi disponibile: '}
-                        content={'XS, S, M, L, XL'}
+                        firstWord={t('gloveAvailableSizes')}
+                        content={t('gloveAvailableSizesContent')}
                     />
                 </div>
                 <div className={"product_boxImage"}>
@@ -103,22 +109,22 @@ export default function Product () {
             </div>
                 <div className={'product__thirdLine'}>
                     <ColoredWordText
-                        firstWord={'Etichetare și conformitate cu standardele: '}
-                        content={'EN ISO 374-1, EN 374-2, EN, EN 374-3, EN 455-1, EN 455-2, EN 455-3, EN 455-4, EN 1186, EN 1149: 2, ASTM D6319, ASTM D7319'}
+                        firstWord={t('gloveLabelingCompliance')}
+                        content={t('gloveLabelingComplianceContent')}
                     />
                     <ColoredWordText
-                        firstWord={'Scopul vizat: '}
-                        content={'clasa de dispozitiv medical I, conform prevederilor Regulamentului MD (UE) 2017/745, Mănuși de protecție de unică folosință - EIP categoria III (protecție împotriva substanțelor chimice pe timp limitat)'}
+                        firstWord={t('glovePurpose')}
+                        content={t('glovePurposeContent')}
                     />
                 </div>
                 <div className={'product__fourthLine'}>
                     <div className="advantages">
                     <Line width={width < 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
-                    <BigHeading color='blue' fontWeight='bold' content={'Avantaje'} />
-                    <Paragraph content='Produs fabricat in UE' />
-                    <Paragraph content='Stocuri disponibile imediat' />
-                    <Paragraph content='Livrare rapida si sigura' />
-                    <Paragraph content='Calitate înaltă și prețuri competitive' />
+                    <BigHeading color='blue' fontWeight='bold' content={t('gloveAdvantages')} />
+                    <Paragraph content={t('gloveManufacturedEU')} />
+                    <Paragraph content={t('gloveStockAvailable')} />
+                    <Paragraph content={t('gloveFastDelivery')} />
+                    <Paragraph content={t('gloveHighQuality')} />
                     <br/>
                     <Line width={width <= 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
                     </div>
