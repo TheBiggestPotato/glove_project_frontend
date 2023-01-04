@@ -58,5 +58,7 @@
     "phone": "Phone",
     "message": "Message",
     "send": "Send",
-    "getInTouch": "Get in touch"
+    "getInTouch": "Get in touch",
+    "successMessage": "Message was sent!",
+    "errorMessage": "Message did not send!"
 }

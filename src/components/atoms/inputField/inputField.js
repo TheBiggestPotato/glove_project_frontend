@@ -4,7 +4,7 @@ import './inputField.scss'
 
 export default function InputField (props) {
 
-    const { type, placeholder, width, height } = props
+    const { type, placeholder, width, height, name } = props
 
     const [input, setInput] = useState('');
 
@@ -12,8 +12,8 @@ export default function InputField (props) {
         <input 
             className='inputField'
             type={type} 
+            name={name}
             placeholder={placeholder}
-            onInput={e => setInput(e.target.value)}
             style={{
                 width: width,
                 height: height,
