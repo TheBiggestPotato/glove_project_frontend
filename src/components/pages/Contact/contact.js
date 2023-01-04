@@ -56,10 +56,6 @@ export default function Contact () {
         });
     };
 
-    const removeInput = () => {
-        form.current.value = '';
-      };
-
     return(
         <>
         {width < 992 ? <MobileHeader /> : <Nav />}
