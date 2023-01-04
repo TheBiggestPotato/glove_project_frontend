@@ -58,5 +58,7 @@
     "phone": "Telefon",
     "message": "Mesaj",
     "send": "Trimite",
-    "getInTouch": "Unde ne găsiți"
+    "getInTouch": "Unde ne găsiți",
+    "successMessage": "Mesajul a fost trimis!",
+    "errorMessage": "Mesajul nu s-a trimis!"
 }

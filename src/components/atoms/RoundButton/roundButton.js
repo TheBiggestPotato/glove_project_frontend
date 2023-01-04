@@ -19,7 +19,7 @@ function RoundButton(props) {
 
   return (
     <>
-      <button className={`btn btn--${buttonType}`} onClick={handleClick} 
+      <button className={`btn btn--${buttonType}`} onClick={handleClick}
       style={{ 
         padding: `${padding}`,
         fontSize: `${fontSize}`
