@@ -70,7 +70,7 @@ export default function Product () {
             </div>
             </div>
             <div className="product__thematicBrake">
-            <Line width={width <= 992 ? '150px': '640px'} height={width < 992 ? '2px' : '3px'}/>
+            <Line width={width <= 992 ? '150px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
             </div>
             <div className={'product__secondLine'}>
                 <div className={'product__description'}>
@@ -119,14 +119,14 @@ export default function Product () {
                 </div>
                 <div className={'product__fourthLine'}>
                     <div className="advantages">
-                    <Line width={width < 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
+                    <Line width={width < 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
                     <BigHeading color='blue' fontWeight='bold' content={t('gloveAdvantages')} />
                     <Paragraph content={t('gloveManufacturedEU')} />
                     <Paragraph content={t('gloveStockAvailable')} />
                     <Paragraph content={t('gloveFastDelivery')} />
                     <Paragraph content={t('gloveHighQuality')} />
                     <br/>
-                    <Line width={width <= 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} />
+                    <Line width={width <= 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
                     </div>
                     <br/>
                     <RoundButton buttonType={'first'} label={'Contact'} padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'}/>

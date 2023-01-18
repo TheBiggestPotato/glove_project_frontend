@@ -2,12 +2,12 @@ import React from "react";
 import "./line.scss";
 
 const Line = (props) => {
-  const { width, height } = props;
+  const { width, height, color } = props;
 
   return (
     <>
       <hr
-        className="line"
+        className={`line line--${color}`}
         style={{ width: `${width}`, height: `${height}` }}
       ></hr>
     </>
