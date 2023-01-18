@@ -9,7 +9,7 @@ export default function InputField (props) {
     const [input, setInput] = useState('');
 
     return (
-        <input 
+        <input
             className='inputField'
             type={type} 
             name={name}
@@ -18,6 +18,7 @@ export default function InputField (props) {
                 width: width,
                 height: height,
             }}
+            required
         >
          </input>
     )
