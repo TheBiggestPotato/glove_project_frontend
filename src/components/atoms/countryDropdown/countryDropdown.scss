@@ -1,0 +1,21 @@
+@use "../../../constants/colors";
+@use "../../../fonts/fonts.scss";
+
+.react-select  {
+    width: 500px;
+    padding-left: 0;
+    border-radius: 60px;
+    border: 1px solid colors.$app-blue;
+    color: colors.$app-blue;
+    outline: none;
+}
+
+.country-option {
+    display: flex;
+    gap: 10px;
+
+    img {
+        width: 30px;
+        height: 20px;
+    }
+}

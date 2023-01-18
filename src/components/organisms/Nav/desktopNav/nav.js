@@ -22,7 +22,7 @@ export default function Nav() {
         <RoundButton label={t('about')} buttonType={"second"} padding='0.625rem 1rem' route='/about' />
         <RoundButton label={t('product')} buttonType={"second"} padding='0.625rem 1rem' route='/product'/>
         <RoundButton label={t('contact')} buttonType={"second"} padding='0.625rem 1rem' route='/contact'/>
-        <RoundButton label={t('order')} buttonType={"first"} padding='0.625rem 1rem'/>
+        <RoundButton label={t('order')} buttonType={"first"} padding='0.625rem 1rem' route='/order' />
         <LanguageButton buttonType={"first"} />
       </div>
     </div>
