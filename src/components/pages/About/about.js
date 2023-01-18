@@ -43,7 +43,7 @@ export default function About () {
                     {valuesData.map((section) => {
                         return(
                         <div key={section.id} className='about__info__values__headline__section'>
-                        <Line width={width < 922 ? '300px' : '340px'} height='0.125rem'/>
+                        <Line width={width < 922 ? '300px' : '340px'} height='0.125rem' color='blue'/>
                         <BigHeading  content={t(section.heading)}/>
                         <Paragraph content={t(section.content)}/>
                         <br/>
@@ -51,7 +51,7 @@ export default function About () {
                         </div>
                         )
                     })}
-                    <Line width={width < 922 ? '300px' : '340px'} height='0.125rem'/>
+                    <Line width={width < 922 ? '300px' : '340px'} height='0.125rem' color='blue'/>
                     </div>
                     </div>
                 </div>
