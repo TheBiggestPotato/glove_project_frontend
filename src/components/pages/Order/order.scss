@@ -6,112 +6,189 @@
 }
 
 .order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .order__body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+    min-width: 600px; 
 
-    .order__body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 700px;
-        min-width: 500px;
-        height: 1000px;
+    form {
+      width: 700px;
+      border: 3px solid colors.$darker-blue;
+      border-radius: 40px;
+      margin-top: -20px;
 
-        form {
-          border-style: solid;
-          border-radius: 40px;
-          top: -50px;
+       .order__body__form__input {
+          position: relative;
+          padding: 10px 0;
 
-          .order__body__form__input {
-            
-            position: relative;
-            padding: 10px 0;
-
-            &:first-of-type {
-              padding-top: 20;
-            }
-            &:last-of-type {
-              padding-bottom: 0;
-            }
-            
-            label {
-              @extend .transition;
-              transform-origin: left center;
-              color: colors.$app-blue;
-              font-weight: 100;
-              letter-spacing: 0.01em;
-              font-size: 17px;
-              box-sizing: border-box;
-              padding: 10px 15px;
-              display: block;
-              position: absolute;
-              margin-top: -5px;
-              z-index: 2;
-              pointer-events: none;
-
-            }
-
-            input {
-              @extend .transition;
-              appearance: none;
-              background-color: none;
-              border: 1px solid colors.$app-blue;
-              line-height: 0;
-              font-size: 17px;
-              width: 100%;
-              display: block;
-              box-sizing: border-box;
-              padding: 10px 15px;
-              border-radius: 60px;
-              color: colors.$app-blue;
-              font-weight: 100;
-              letter-spacing: 0.01em;
-              position: relative;
-              z-index: 1; 
-              
-              &:focus {
-                outline: none;
-                background: colors.$app-blue;
-                color: white;
-                margin-top: 30px;
-              }
-  
-              &:focus + label {
-                transform: translate( 0 , -35px );
-              }
-  
-              &:valid{
-                margin-top: 30px
-              }
-              
-              &:valid ~ label {
-                text-transform: uppercase;
-                font-style: italic;
-                transform: scale(0.6) translate( 5px , -35px ) ;
-              }
-            }
+          &:first-of-type {
+            padding-top: 20;
           }
-      }
 
-      .order__body__form__address {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
-        .order__body__form__address__regionDropdown {
-          width: 200px;
-          height: 30px;
-          margin: 10px 0;
-          border-radius: 60px;
-          border: 1px solid colors.$app-blue;
-          color: colors.$app-blue;
-
-          &:focus {
-            outline: none;
+          &:last-of-type {
+            padding-bottom: 0;
+          }
             
+          label {
+            @extend .transition;
+            transform-origin: left center;
+            color: colors.$app-blue;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            font-size: 17px;
+            box-sizing: border-box;
+            padding: 10px 15px;
+            display: block;
+            position: absolute;
+            margin-top: -5px;
+            z-index: 2;
+            pointer-events: none;
+          }
+
+          input {
+            @extend .transition;
+            appearance: none;
+            background-color: none;
+            border: 1px solid colors.$app-blue;
+            line-height: 0;
+            font-size: 17px;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border-radius: 60px;
+            color: colors.$app-blue;
+            font-weight: 500;
+            font-style: fonts.$crimson-text;
+            letter-spacing: 0.01em;
+            position: relative;
+            z-index: 1; 
+              
+            &:focus {
+              outline: none;
+              background: colors.$app-blue;
+              color: white;
+              margin-top: 30px;
+            }
+  
+            &:focus + label {
+              transform: translate( 0 , -35px );
+            }
+  
+            &:valid{
+              margin-top: 30px;
+              background: colors.$app-blue;
+              color: white;
+            }
+              
+            &:valid ~ label {
+              text-transform: uppercase;
+              font-style: italic;
+              transform: scale(0.6) translate( 5px , -35px ) ;
+            }
           }
         }
-      }
+
+        .order__body__form__contactInfo {
+          margin-left: 40px;
+
+          h2 {
+            margin-bottom: 1px;
+            padding: 0 18px;
+          }
+
+          label {
+             padding: 12px 20px;
+          }
+        }
+
+        .order__body__form__quantity {
+          margin-left: 40px;
+
+          h2 {
+            margin-bottom: 1px;
+            padding: 0 18px;
+          }
+
+          label {
+             padding: 12px 20px;
+          }
+        }
+      
+
+        .order__body__form__address {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+            h2 {
+              margin-left: 40px;
+              margin-bottom: 11px;
+              padding: 0 19px;
+            }
+
+            .order__body__form__address--firstRow {
+              display: flex;
+              justify-content: space-evenly;
+              width: 100%;
+
+              .order__body__form__address__regionDropdown {
+                width: 290px;
+                height: 40px;
+                padding: 0 10px;
+                border-radius: 60px;
+                border: 1px solid colors.$app-blue;
+                color: colors.$app-blue;
+                font-family: fonts.$crimson-text;
+                font-size: 17px;
+
+                &:focus {
+                  background-color: colors.$app-blue;
+                  color: white;
+                }
+
+                &:valid {
+                  background-color: colors.$app-blue;
+                  color: white;
+                }
+              }
+           } 
+
+           .order__body__form__address--secondRow {
+             display: flex;
+             justify-content: space-evenly;
+             width: 100%;
+             margin-top: 10px;
+
+             label {
+               padding: 12px 20px;
+             }
+           }
+
+           .order__body__form__address--thirdRow {
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             margin-left: 40px;
+
+             label {
+               padding: 12px 20px;
+             }
+           }
+       }
+
+       .orderButton {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+       }
     }
+  }
 }

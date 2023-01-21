@@ -20,12 +20,13 @@ export default function CountryDropdown ({ selectedOptionCountry, setSelectedOpt
                 }).catch((err)=> console.log(err))   
     }, []);
 
-    console.log(selectedOptionCountry)
-
     return (
-        <div className='react-select'>
+        <div>
           {selectedOptionCountry.value && (
             <Select
+              name='countryDropdown'
+              className="react-select-container"
+              classNamePrefix="react-select"
               menuPosition="fixed"
               defaultValue={selectedOptionCountry}
               onChange={setSelectedOptionCountry}
