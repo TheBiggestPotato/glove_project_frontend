@@ -3,10 +3,10 @@
 
 .react-select-container  {
     width: 290px;
-    padding-left: 0;
-    border-radius: 60px;
-    border: 1px solid colors.$app-blue;
-    color: colors.$app-blue;
+    // padding-left: 0;
+    // border-radius: 60px;
+    // border: 1px solid colors.$app-blue;
+    // color: colors.$app-blue;
     outline: none;
     position: relative;
     z-index: 9999;
@@ -17,7 +17,6 @@
 .react-select__menu {
     position: relative;
     z-index: 9999;
-  
 }
 
 .country-option {

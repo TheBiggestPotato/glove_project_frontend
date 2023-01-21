@@ -9,12 +9,16 @@ import CountryDropdown from "../../atoms/countryDropdown/countryDropdown";
 import RoundButton from "../../atoms/RoundButton/roundButton";
 import { RegionDropdown } from 'react-country-region-selector';
 
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+
 import axios from "axios";
 const { getName } = require('country-list');
 
 export default function Order () {
 
     const [userCountry, setUserCountry] = useState({});
+    const [phone, setPhone] = useState()
 
         useEffect(() => {
             axios.get('https://ipapi.co/json/').then((response) => {
@@ -41,15 +45,18 @@ export default function Order () {
 
 
         const formElements = Array.from(form.current.elements)
+
+        formElements.splice(4, 1);
         formElements.splice(6, 1);
         formElements.splice(12, 1);
+        formElements[4].value = "" + formElements[4].value
         
         const values = formElements.map(element => element.value);
-
 
         axios.post('http://localhost:5000/submit', values)
             .then(response => {
                 console.log('Success:', response);
+                formElements[4].value = formElements[4].value.slice(1)
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -71,30 +78,33 @@ export default function Order () {
                         <SmallHeading content='Contact Info' color='darkerBlue'/>
                         <div className="order__body__form__input">
                             <label>First Name</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='firstName'/>
+                            <InputField type='text' height='40px' width={'600px'} name='firstName' isRequired={true}/>
                         </div> 
                         <div className="order__body__form__input">
                             <label>Last Name</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='lastName'/>
+                            <InputField type='text' height='40px' width={'600px'} name='lastName' isRequired={true}/>
                         </div>
                         <div className="order__body__form__input">
                             <label>CUI (optional)</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='CUI'/>
+                            <InputField type='text' height='40px' width={'600px'} name='CUI' isRequired={true} value=''/>
                         </div>     
                         <div className="order__body__form__input">
                             <label>Email</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='email'/>
+                            <InputField type='text' height='40px' width={'600px'} name='email' isRequired={true}/>
                         </div>    
-                        <div className="order__body__form__input">
-                            <label>Phone</label>   
-                            <InputField type='number' height='40px' width={'600px'} name='phone'/>
-                        </div>
+                        <PhoneInput
+                            international
+                            defaultCountry={selectedOptionCountry.value}
+                            placeholder="Enter phone number"
+                            value={phone}
+                            onChange={setPhone}
+                            /> 
                     </div>
                     <div className="order__body__form__quantity">
                         <SmallHeading content='Order Quantity' color='darkerBlue'/>
                         <div className="order__body__form__input">
                         <label>Quantity</label>   
-                        <InputField type='number' height='40px' width={'600px'} name='quantity'/>
+                        <InputField type='number' height='40px' width={'600px'} name='quantity' isRequired={true}/>
                         </div>
                     </div>
                     <div className="order__body__form__address">
@@ -111,26 +121,27 @@ export default function Order () {
                         countryValueType="short"
                         classes="order__body__form__address__regionDropdown"
                         defaultOptionLabel='Select your Region'
+                        required
                     />
                     </div>
                     <div className="order__body__form__address--secondRow"> 
                     <div className="order__body__form__input">
                         <label>Localitate</label>   
-                        <InputField type='text' height='40px' width={'290px'} name='localitate'/>
+                        <InputField type='text' height='40px' width={'290px'} name='localitate' isRequired={true}/>
                     </div> 
                     <div className="order__body__form__input">
                         <label>Cod Postal</label>   
-                        <InputField type='number' height='40px' width={'290px'} name='codPostal'/>
+                        <InputField type='number' height='40px' width={'290px'} name='codPostal' isRequired={true}/>
                     </div> 
                     </div>
                     <div className="order__body__form__address--thirdRow"> 
                     <div className="order__body__form__input">
                     <label>Address Line 1</label>   
-                        <InputField type='text' height='40px' width={'623px'} name='address1'/>
+                        <InputField type='text' height='40px' width={'623px'} name='address1' isRequired={true}/>
                     </div> 
                     <div className="order__body__form__input">
                         <label>Address Line 2</label>   
-                        <InputField type='text' height='40px' width={'623px'} name='address2'/>
+                        <InputField type='text' height='40px' width={'623px'} name='address2' isRequired={true}/>
                     </div> 
                     </div>
                     </div>

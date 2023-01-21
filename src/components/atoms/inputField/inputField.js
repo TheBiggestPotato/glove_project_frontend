@@ -4,13 +4,15 @@ import './inputField.scss'
 
 export default function InputField (props) {
 
-    const { type, placeholder, width, height, name } = props
+    const { type, placeholder, width, height, name, isRequired, value } = props
 
     const [input, setInput] = useState('');
+    const [required, setRequired] = useState({ required: isRequired });
 
     return (
         <input
             className='inputField'
+            value={value}
             type={type} 
             name={name}
             placeholder={placeholder}
@@ -18,7 +20,7 @@ export default function InputField (props) {
                 width: width,
                 height: height,
             }}
-            required
+            {...required}
         >
          </input>
     )
