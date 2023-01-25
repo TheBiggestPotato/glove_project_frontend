@@ -3,8 +3,8 @@ import React from "react";
 import Nav from "../../organisms/Nav/desktopNav/nav";
 import Line from "../../atoms/Line/line";
 import RoundButton from "../../atoms/RoundButton/roundButton";
-import BigHeading from "../../atoms/BigHeading/bigHeading";
-import Curtain from "../../molecules/curtain/curtain";
+import Card from "../../atoms/card/card";
+
 
 import gloveHeroTitle from '../../../assets/images/gloveHeroTitle.png'
 
@@ -26,15 +26,12 @@ const Home = () => {
         </div>
       </div>
       <div className="home__secondRow">
-        <div className="home__secondRow__headine">
-          <BigHeading content='Why us?' color='blue'/>
+        <div className="home__secondRow__description">
+        <span>Why us?</span>
+        <span>We understand the importance of safety in the workplace and strive to provide our customers with reliable protective gear. See why you should choose our nitrile gloves:</span>
         </div>
-        <div className='home__secondRow__cards'>
-          <Curtain contentLeftPanel='No allergi' contentRightPanel='c reactions'/>
-          <Curtain contentLeftPanel='Reliable&nbsp;' contentRightPanel='protection'/>
-          <Curtain contentLeftPanel='Extremel' contentRightPanel='y durable'/>
-          <Curtain contentLeftPanel='Resistant to&nbsp;ratures' contentRightPanel='extreme tempe'/>
-          <Curtain contentLeftPanel='Comfortable' contentRightPanel='s'/>
+        <div>
+          <Card />
         </div>
       </div>
     </div>

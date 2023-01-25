@@ -1,0 +1,28 @@
+@use "../../../constants/colors";
+@use "../../../fonts/fonts.scss";
+
+.card {
+    border-style: solid;
+    height: 500px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 30px 50px;
+
+    .card__number {
+
+    }
+
+    .card__content {
+
+        .card__content__headline{
+
+        }
+
+        .card__content__description{
+
+        }
+    }
+}
