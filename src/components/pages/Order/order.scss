@@ -93,6 +93,11 @@
               transform: scale(0.6) translate( 5px , -35px ) ;
             }
           }
+          
+          input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
         }
 
         .order__body__form__contactInfo {
@@ -195,15 +200,15 @@
                 color: colors.$app-blue;
                 font-family: fonts.$crimson-text;
                 font-size: 17px;
+                font-weight: 600;
 
                 &:focus {
-                  background-color: colors.$app-blue;
-                  color: white;
+                  border-color: colors.$app-blue;
+                  outline: none;
                 }
 
                 &:valid {
-                  background-color: colors.$app-blue;
-                  color: white;
+                  border-color: colors.$app-blue;
                 }
               }
            } 
@@ -234,8 +239,13 @@
        .orderButton {
         margin-top: 20px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
+
+        button {
+          margin-top: 20px;
+        }
        }
     }
   }

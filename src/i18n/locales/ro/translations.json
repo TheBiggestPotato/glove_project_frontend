@@ -60,5 +60,22 @@
     "send": "Trimite",
     "getInTouch": "Unde ne găsiți",
     "successMessage": "Mesajul a fost trimis!",
-    "errorMessage": "Mesajul nu s-a trimis!"
+    "errorMessage": "Mesajul nu s-a trimis!",
+
+    "orderForm": "Formular de comandă",
+    "contactInfo": "Informatii de Contact",
+    "firstName": "Prenume",
+    "lastName": "Nume de familie",
+    "VAT": "CUI",
+    "orderQuantity": "Cantitatea Comenzii",
+    "quantity": "Cantitate",
+    "address": "Adresa",
+    "selectYourRegion": "Selectativa regiunea",
+    "city": "Oras/Localitate",
+    "postalCode": "Cod postal",
+    "address1": "Adresa 1",
+    "address2": "Adresa 2",
+    "submit": "Trimite",
+    "successOrder": "Comanda dvs. a fost trimisă! Veți fi contactat de unul dintre colegii noștri în curând!",
+    "errorOrder": "Comanda nu a fost trimisă!"
 }

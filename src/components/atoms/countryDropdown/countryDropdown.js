@@ -21,15 +21,13 @@ export default function CountryDropdown ({ selectedOptionCountry, setSelectedOpt
     }, []);
 
     const customStyles = {
-      control: (base, state) => ({
-          ...base,
+      control: (provided, state) => ({
+          ...provided,
           backgroundColor: 'white',
-          color: '#0683B9',
+          color: 'white',
           borderRadius: '60px',
           border: '1px solid #0683B9',
-          borderColor: state.isValid ? 'red' : state.isFocused ? 'yellow' : 'gray',
-          // fontWeight: state.isFocused ? 'bold' : 'normal',
-          '&:hover': { borderColor: '#03618A' },
+          '&:hover': { borderColor: '#0683B9' },
       }),
   };
 
@@ -46,12 +44,6 @@ export default function CountryDropdown ({ selectedOptionCountry, setSelectedOpt
               defaultValue={selectedOptionCountry}
               onChange={setSelectedOptionCountry}
               options={myData}
-              // styles={{
-              //   control: (base) => ({ ...base, 
-              //       border: '1px solid blue',
-              //       borderRadius: '60px',
-              //   }),
-              // }}
               formatOptionLabel={(country) => (
                 <div className='country-option'>
                   <img

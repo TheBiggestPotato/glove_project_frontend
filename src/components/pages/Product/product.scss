@@ -141,9 +141,17 @@
       }
     }
 
-    button {
-      margin-top: 1.25rem;
+    .product__fourthLine__buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+
+      button {
+        margin: 0 10px;
+      }
     }
+
+
   }
 }
 }

@@ -129,7 +129,10 @@ export default function Product () {
                     <Line width={width <= 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
                     </div>
                     <br/>
-                    <RoundButton buttonType={'first'} label={'Contact'} padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'}/>
+                    <div className="product__fourthLine__buttons">
+                    <RoundButton buttonType={'first'} label={t('contact')}  padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'} route='/contact'/>
+                    <RoundButton buttonType={'first'} label={t('order')} padding={width < 1200 ? '10px 50px' : '15px 60px'} fontSize={width < 1200 ? '20px' : '22px'} route='/order'/>
+                    </div>
                 </div>
             </div>
         </div>

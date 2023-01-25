@@ -36,6 +36,8 @@
     "gloveStockAvailable": "Stock available immediately",
     "gloveFastDelivery": "Fast and safe delivery",
     "gloveHighQuality": "High quality and competitive prices",
+    "contactUs": "Contact us",
+
 
     "vision": "Our vision",
     "visionContent": "Founded amid a global pandemic, PPS Manufacturing was born out of a call to action. A call to protect the health of people and the well-being of our planet by providing reliable medical protective equipment, while in the constant search for greener solutions.",
@@ -60,5 +62,22 @@
     "send": "Send",
     "getInTouch": "Get in touch",
     "successMessage": "Message was sent!",
-    "errorMessage": "Message did not send!"
+    "errorMessage": "Message did not send!",
+
+    "orderForm": "Order form",
+    "contactInfo": "Contact Info",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "VAT": "VAT",
+    "orderQuantity": "Order Quantity",
+    "quantity": "Quantity",
+    "address": "Address",
+    "selectYourRegion": "Select your region",
+    "city": "City",
+    "postalCode": "Postal Code",
+    "address1": "Address 1",
+    "address2": "Address 2",
+    "submit": "Submit",
+    "successOrder": "Your order has been sent! You will be contacted by one of our colleagues shortly!",
+    "errorOrder": "Order did not send!"
 }

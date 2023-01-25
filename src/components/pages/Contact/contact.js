@@ -28,7 +28,7 @@ export default function Contact () {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault(); // prevents the page from reloading when you hit “Send”
+        e.preventDefault();
     
         emailjs.sendForm('service_68fgiuw', 'template_a8f0yof', form.current, 'Bt6dBxWSL6O_9szau')
         .then((result) => {
@@ -40,7 +40,7 @@ export default function Contact () {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "colored",
+                theme: "light",
                 });
         }, (error) => {
             toast.error(t('errorMessage'), {
@@ -51,7 +51,7 @@ export default function Contact () {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "colored",
+                theme: "light",
                 });
         });
     };
