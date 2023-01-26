@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  min-width: 50%;
 }
 
 code {
@@ -13,11 +15,37 @@ code {
 }
 
 @font-face {
-  font-family: "CrimsonText";
+  font-family: "CrimsonText-Regular";
   src: local("CrimsonText"), url("./fonts/CrimsonText-Regular.ttf"), format("truetype");
 }
 
 @font-face {
   font-family: "CrimsonTextBold";
-  src: local("CrimsonText-Bold"), url("./fonts//CrimsonText-Bold.ttf"), format("truetype");
+  src: local("CrimsonText-Bold"), url("./fonts/CrimsonText-Bold.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: "EudoxusSansLight";
+  src: local("EudoxusSans-Light"), url("./fonts/EudoxusSans-Light.ttf"), format("truetype");
+}
+
+@font-face {
+  font-family: 'EudoxusSans';
+  src: url('./fonts/EudoxusSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quart';
+  src: url('./fonts/Quart-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuartOut';
+  src: url('./fonts/Quart-Outline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
