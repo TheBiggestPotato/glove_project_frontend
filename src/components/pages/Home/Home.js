@@ -6,6 +6,9 @@ import RoundButton from "../../atoms/RoundButton/roundButton";
 import Glove3D from "../../atoms/glove3D/glove3D";
 import BenefitComp from "../../atoms/benefitComp/benefitComp";
 import { Canvas } from "@react-three/fiber";
+import { useInView } from 'react-intersection-observer';
+import useWindowDimensions from "../../../functions/getWindowDimensions";
+import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
 
 import {ReactComponent as AllergiesLogo} from '../../../assets/icons/allergies.svg';
 import {ReactComponent as ProtectionLogo} from '../../../assets/icons/protection.svg';
@@ -17,9 +20,22 @@ import gloveHeroTitle from '../../../assets/images/gloveHeroTitle.png'
 import "./Home.scss";
 
 const Home = () => {
+
+  const { height, width } = useWindowDimensions();
+
+  const [refSecondRow, inViewSecondRow] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const [refThirdRow, inViewThirdRow] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
   return (
     <div className="home">
-      <Nav />
+      {width < 992 ? <MobileHeader /> : <Nav />}
       <div className="home__firstRow">
         <div className="firstHeadline">
         <h1>PPS Medical</h1>
@@ -28,7 +44,7 @@ const Home = () => {
         <h1>Safe Care</h1>
         </div>
         <div className={'canvas'}>
-            <Canvas >
+            <Canvas>
                 <Glove3D />
                 <ambientLight intensity={0.5} />
                 <directionalLight  position={[-10,15,10]} intensity={1} />
@@ -39,8 +55,8 @@ const Home = () => {
         </div>
         <div className="firstCorner">
         <svg>
-            <line x1="10" y1="220" x2="10" y2="601" style={{stroke: '#0683B9', strokeWidth: '5px'}} />
-            <line x1="10" y1="600" x2="550" y2="600" style={{stroke: '#0683B9', strokeWidth: '5px'}} />
+            <line x1="10" y1="180" x2="10" y2="601" style={{stroke: '#0683B9', strokeWidth: '5px'}} />
+            <line x1="10" y1="600" x2="570" y2="600" style={{stroke: '#0683B9', strokeWidth: '5px'}} />
         </svg>
         </div>
         <div className="secondCorner">
@@ -49,16 +65,16 @@ const Home = () => {
             <line x1="600" y1="10" x2="600" y2="360" style={{stroke: '#0683B9', strokeWidth: '5px'}} />
         </svg>
         </div>
-        <div className="home__firstRow__callToActionButtons">
+         <div className="home__firstRow__callToActionButtons">
         <RoundButton label={'More about us'} buttonType={"first"} padding='15px 25px' route='/about'/>
         <RoundButton label={'See our product'} buttonType={"first"} padding='15px 25px' route='/product'/>
         </div>
       </div>
-      <Line width='500px' height='3px' color='blue'/>
-      <div className="home__secondRow">
-        <div className="home__secondRow__description">
+      <Line width='500px' height='3px' color='blue' className='firstBreakLine'/>
+      <div className="home__secondRow" ref={refSecondRow}>
+        <div className={`home__secondRow__description ${inViewSecondRow ? 'animate' : ''}`}>
           <div className="home__secondRow__description__headline">
-            Why would you choose nitrile gloves?
+          Why would you choose nitrile gloves?
           </div>
           <div className="home__secondRow__description__content">
           <span>One of the main reasons someone would choose nitrile gloves over other types of gloves is their chemical resistance. Nitrile is a synthetic rubber that is resistant to many chemicals, including oils, acids, and solvents. This makes them ideal for use in industries such as automotive, petrochemical, and laboratory settings.</span>
@@ -68,13 +84,17 @@ const Home = () => {
           <span>Another advantage of nitrile gloves is that they are often more comfortable and provide a better fit than other types of gloves. Nitrile is a synthetic rubber that is more flexible and stretchy than natural rubber (latex), so it can conform to the hand more easily. This can help reduce hand fatigue and improve dexterit.</span>
           </div>
         </div>
+        <div className={`home__secondRow__image ${inViewSecondRow ? 'animate' : ''}`}>
         <img src={gloveHeroTitle} alt='gloveImg'/>
+        </div>
       </div>
-      <Line width='500px' height='3px' color='blue'/>
-      <div className="home__thirdRow">
+      <Line width='500px' height='3px' color='blue' className='secondBreakLine'/>
+      <div className="home__thirdRow" ref={refThirdRow}>
+          <div className={`home__thirdRow__content ${inViewThirdRow ? 'animate' : ''}`}>
           <h1>Benefits</h1>
           <span>Discover the superior quality and durability of nitrile gloves, trusted by industry experts worldwide. Experience the unmatched strength and puncture resistance of nitrile, making it the go-to choice for professionals in a variety of industries. Don't settle for less, see why industry experts choose nitrile gloves.</span>
-          <div className="home__thirdRow__benefits">
+          </div>
+          <div className={`home__thirdRow__benefits ${inViewThirdRow ? 'animate' : ''}`}>
           <BenefitComp icon={<AllergiesLogo/>} headLine='No allergic reactions' description='Nitrile is hypoallergic and does not cause rashes, itching, or any other symptom typical for a latex allergy.'/>
           <BenefitComp icon={<ProtectionLogo/>} headLine='Reliable protection' description='Nitrile gloves protects you from chemical substances and acids, hazardous microorganisms, oils and petrol-based products'/>
           <BenefitComp icon={<DurableLogo/>} headLine='Extremely durable' description='They are extremely resistant to tears and simultaneously, do not interfere with the tactile sensitivity of the hands in any way because they are thin and comfortable.'/>

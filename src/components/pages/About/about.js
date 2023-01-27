@@ -44,7 +44,7 @@ export default function About () {
                         return(
                         <div key={section.id} className='about__info__values__headline__section'>
                         <Line width={width < 922 ? '300px' : '340px'} height='0.125rem' color='blue'/>
-                        <BigHeading  content={t(section.heading)}/>
+                        <BigHeading  content={t(section.heading)} color='darkestBlue'/>
                         <Paragraph content={t(section.content)}/>
                         <br/>
                         <br/>
