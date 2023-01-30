@@ -77,5 +77,24 @@
     "address2": "Adresa 2",
     "submit": "Trimite",
     "successOrder": "Comanda dvs. a fost trimisă! Veți fi contactat de unul dintre colegii noștri în curând!",
-    "errorOrder": "Comanda nu a fost trimisă!"
-}
+    "errorOrder": "Comanda nu a fost trimisă!",
+
+    "moreAboutUs": "Mai multe despre noi",
+    "seeOurProduct": "Vezi produsul nostru",
+    "whyWouldYouChooseNitrileGloves": "De ce ai alege mănuși de nitril?",
+    "firstParagraphDescription": "Unul dintre principalele motive pentru care cineva ar alege mănuși de nitril față de alte tipuri de mănuși este rezistența lor chimică. Nitrilul este un cauciuc sintetic care este rezistent la multe substanțe chimice, inclusiv uleiuri, acizi și solvenți. Acest lucru le face ideale pentru utilizare în industrii precum cea auto, petrochimică și condițiile de laborator.",
+    "secondParagraphDescription": "Mănușile din nitril sunt, de asemenea, mai rezistente la perforare decât mănușile din latex. Acest lucru le face o alegere bună pentru industriile în care există riscul apariției obiectelor ascuțite, cum ar fi construcțiile sau de fabricație.",
+    "thirdParagraphDescription": "Un alt avantaj al mănușilor de nitril este că acestea sunt adesea mai confortabile și oferă o fixare mai bună decât alte tipuri de mănuși. Nitrilul este un cauciuc sintetic care este mai flexibil și mai elastic decât cauciucul natural (latex), astfel, se poate conforma cu mâna mai ușor. Acest lucru poate ajuta la reducerea oboselii mâinilor și la îmbunătățirea dexterității.",
+    "benefits": "Beneficii",
+    "benefitsDescription": "Descoperiți calitatea superioară și durabilitatea mănușilor din nitril, în care au încredere experții din industriile din întreaga lume. Experimentați rezistența la înțepături și perforare de neegalat a nitrilului, făcându-l alegerea de preferat pentru profesioniștii dintr-o varietate de industrii. Nu vă mulțumiți cu mai puțin, vedeți de ce experții din industrie aleg mănușile de nitril.",
+    "noAllergicReactions": "Fără reacții alergice",
+    "noAllergicReactionsDescription": "Nitrilul este hipoalergic și nu provoacă erupții cutanate, mâncărimi sau orice alt simptom tipic pentru o alergie la latex",
+    "reliableProtection": "Protecție de încredere",
+    "reliableProtectionDescription": "Mănușile din nitril vă protejează de substanțe chimice și acizi, microorganisme periculoase, uleiuri și produse pe bază de benzină",
+    "extremelyDurable": "Extrem de durabile",
+    "extremelyDurableDescription": "Sunt extrem de rezistente la sfâșieri și, in același timp, nu interfereaza in niciun fel cu sensibilitatea tactila a mainilor deoarece sunt subtiri si confortabile.",
+    "resistantExtremeTemperatures": "Rezistente la temperaturi extreme",
+    "resistantExtremeTemperaturesDescriptions": "Nitrilul este un material care poate rezista la orice temperatură cuprinsă între -40 °C și +108 °C.",
+    "comfortableFittingHand": "Confortabil și potrivit pentru orice mână",
+    "comfortableFittingHandDescription": "Pe lângă faptul că sunt super durabile, hipoalergice și fiabile, mănușile PPS Medical Safe Care sunt ergonomice și se potrivesc perfect pentru orice mână."
+}   

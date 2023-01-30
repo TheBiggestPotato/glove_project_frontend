@@ -34,7 +34,7 @@
     }
   }
 
-  @media only screen and (min-width: 1580px) {
+  @media only screen and (min-width: 1598px) {
     .home {
         display: flex;
         flex-direction: column;
@@ -42,13 +42,14 @@
         width: 100%;
         height: 100%;
         position: absolute;
-
+       
         .home__firstRow  {
           position: absolute;
           height: 0;
           display: flex;
           flex-direction: column;
           align-items: center;
+          margin-top: -30px;
 
           .firstHeadline {
             animation-name: slideInLeft;
@@ -100,13 +101,17 @@
             height: 600px;
             width: 700px;
             position: absolute;
-            margin-right: 870px;
+            margin-right: 874px;
             margin-top: 227px;
           
             
             svg {
               width: 710px;
               height: 610px;
+
+              line:nth-child(2) {
+                transform: translateX(-10px);
+              }
             }
           }
 
@@ -123,6 +128,10 @@
             svg {
               width: 610px;
               height: 610px;
+
+              line:nth-child(2) {
+                transform: translateY(-10px);
+              }
             }
           }
 
@@ -145,52 +154,54 @@
 
         .home__secondRow {
           display: flex;
-          width: 100%;
+          flex-direction: column;
           justify-content: space-evenly;
+          width: 100%;
           align-items: center;
           margin-bottom: 50px;
           margin-top: 900px;
 
-          
-          .home__secondRow__description.animate{
+          .home__secondRow__content {
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 800px;
-            animation-name: slideInLeft;
-            animation-duration: 2s;
-
-            .home__secondRow__description__headline{
-              color: colors.$app-blue;
-              font-family: 'EudoxusSans';
-              font-size: 17px;
-              margin-bottom: 10px;
-            }
-
-            .home__secondRow__description__content{
-              color: colors.$darkest-blue;
-              font-family: fonts.$crimson-text;
-              font-size: 25px;
+            justify-content: space-evenly;
+            margin-top: 70px;
+          
+            .home__secondRow__description.animate{
               display: flex;
               flex-direction: column;
+              align-items: flex-start;
+              width: 800px;
+              animation-name: slideInLeft;
+              animation-duration: 2s;
+
+              .home__secondRow__description__headline{
+                color: colors.$app-blue;
+                font-family: 'EudoxusSans';
+                font-size: 17px;
+                margin-bottom: 10px;
+              }
+
+              .home__secondRow__description__content{
+                color: colors.$darkest-blue;
+                font-family: fonts.$crimson-text;
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+              }
+            }
+
+            .home__secondRow__image.animate{
+              animation-name: slideInRight;
+              animation-duration: 2s;
+              img {
+                border: 4px solid colors.$app-blue;
+                border-radius: 50%;
+                margin-bottom: 50px;
+                margin-top: -40px;
+              }
             }
           }
-
-          .home__secondRow__image.animate{
-            animation-name: slideInRight;
-            animation-duration: 2s;
-            img {
-              margin-top: 100px;
-              border: 4px solid colors.$app-blue;
-              border-radius: 50%;
-              margin-bottom: 100px;
-            }
-          }
-        }
-
-        .secondBreakLine {
-          position: absolute;
-          margin-top: 1780px;
         }
 
         .home__thirdRow {
@@ -199,8 +210,8 @@
           align-items: center;
           text-align: center;
           width: 100%;
-          margin-top: 100px;
-
+          margin-top: -3.125rem;
+          
           .home__thirdRow__content.animate{
             display: flex;
             flex-direction: column;
@@ -232,191 +243,926 @@
             animation-name: slideInBottom;
             animation-duration: 2s;
           }
-          
         }
     }
+}
+
+@media only screen and (min-width: 1183px) and (max-width: 1597px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      
+      .home__firstRow  {
+        position: absolute;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -50px;
+        margin-left: 50px;
+
+
+        .firstHeadline {
+          animation-name: slideInLeft;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 240px;
+          margin-right: 600px;
+          width: 100%;
+        
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 70px;
+            text-align: center;
+          }
+        }
+
+        .secondHeadline {
+          animation-name: slideInRight;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 460px;
+          margin-left: 550px;
+          width: 100%;
+        
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 70px;
+            text-align: center;
+          }
+        }
+
+        .canvas {
+          position: absolute;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+          height: 500px;
+          width: 800px;
+          margin-right: 20px;
+          margin-top: 180px;
+        }
+
+          .firstCorner{
+            animation-name: slideInLeft;
+            animation-duration: 2s;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            margin-top: 104px;
+            margin-right: 962px;
+            
+            svg {
+              width: 300px;
+              height: 602px;
+              
+              line:nth-child(1) {
+                transform: translateY(100px);
+              }
+              line:nth-child(2) {
+                transform: translateX(-200px);
+              }
+            }
+          }
+
+          .secondCorner{
+            animation-name: slideInRight;
+            animation-duration: 2s;
+            height: 600px;
+            width: 600px;
+            
+            position: absolute;
+            margin-top: 200px;
+            margin-left: 317px;
+            
+            svg {
+              width: 602px;
+              height: 300px;
+
+              line:nth-child(1) {
+                transform: translateX(200px);
+              }
+              line:nth-child(2) {
+                transform: translateY(-50px);
+              }
+            }
+          }
+
+        .home__firstRow__callToActionButtons{
+          animation-name: slideInBottom;
+          animation-duration: 2.5s;
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          width: 500px;
+          z-index: 10;
+          margin-top: 650px;
+
+          button {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .firstBreakLine {
+        position: absolute;
+        margin-top: 720px;
+      }
+
+      .home__secondRow {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 700px;
+        
+        .home__secondRow__content{
+          display: flex;
+          .home__secondRow__description.animate{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
+            
+            .home__secondRow__description__headline{
+              color: colors.$app-blue;
+              font-family: 'EudoxusSans';
+              font-size: 15px;
+              margin-bottom: 10px;
+              padding: 0px 150px;
+            }
+
+            .home__secondRow__description__content{
+              color: colors.$darkest-blue;
+              font-family: fonts.$crimson-text;
+              font-size: 20px;
+              display: flex;
+              flex-direction: column;
+              padding: 0 150px;
+              line-height: 25px;
+            }
+
+            
+          }
+
+          .home__secondRow__image.animate{
+            animation-name: slideInRight;
+            animation-duration: 2s;
+
+            img {
+              width: 400px;
+              height: 400px;
+              margin-top: 25px;
+              border: 4px solid colors.$app-blue;
+              border-radius: 50%;
+              margin-right: 60px;
+            }
+          }
+        }
+
+        .secondBreakLine{
+          margin-top: 60px;
+        }
+      }
+
+      .home__thirdRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: -50px;
+
+        .home__thirdRow__content.animate{
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+
+          h1 {
+            color: colors.$app-blue;
+            font-family: 'EudoxusSans';
+            font-size: 50px;
+          }
+
+          span {
+            color: colors.$darkest-blue;
+            font-family: fonts.$crimson-text;
+            font-size: 17px;
+            padding: 0 210px;
+            line-height: 25px;
+          }
+        }
+
+        .home__thirdRow__benefits.animate {
+          padding: 0 20px;
+          display: flex;
+          gap: 60px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 60px;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+        } 
+      }
   }
+}
 
-// @media only screen and (max-width: 600px) {
-//     .home {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
+@media only screen and (min-width: 801px) and (max-width: 1183px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+    .home__firstRow  {
+      position: absolute;
+      height: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -50px;
+      margin-left: 30px;
 
-//       .home__firstRow  {
-//         width: 100vw;
-//         height: 100vh;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         position: relative;
-        
-//         .firstHeadline {
-//           animation-name: slideInLeft;
-//           animation-duration: 2s;
-//           position: absolute;
-//           top: 80px;
-//           left: 10px;
-        
-//           h1 {
-//             font-family: "Quart";
-//             font-weight: 500;
-//             color: colors.$app-blue;
-//             font-size: 40px;
-//             text-align: center;
-//             width: 100px;
-//           }
-//         }
 
-//         .secondHeadline {
-//           animation-name: slideInRight;
-//           animation-duration: 2s;
-//           position: absolute;
-//           width: 100px;
-//           bottom: 250px;
-//           right: 40px;
-        
-//           h1 {
-//             font-family: "Quart";
-//             font-weight: 500;
-//             color: colors.$app-blue;
-//             font-size: 50px;
-//             text-align: center;
-//           }
-//         }
+      .firstHeadline {
+        animation-name: slideInLeft;
+        animation-duration: 3s;
+        position: absolute;
+        margin-top: 240px;
+        margin-right: 480px;
+        width: 100%;
+      
+        h1 {
+          font-family: "Quart";
+          font-weight: 500;
+          color: colors.$app-blue;
+          font-size: 50px;
+          text-align: center;
+        }
+      }
 
-//         .canvas {
-//           animation-name: slideInBottom;
-//           animation-duration: 2s;
-//           height: 200px;
-//           width: 400px;
-//           margin-top: -200px;
-//         }
+      .secondHeadline {
+        animation-name: slideInRight;
+        animation-duration: 3s;
+        position: absolute;
+        margin-top: 460px;
+        margin-left: 450px;
+        width: 100%;
+      
+        h1 {
+          font-family: "Quart";
+          font-weight: 500;
+          color: colors.$app-blue;
+          font-size: 50px;
+          text-align: center;
+        }
+      }
 
-//         .firstCorner{
-//           animation-name: slideInLeft;
-//           animation-duration: 2s;
-//           height: 100px;
-//           width: 100px;
-//           position: absolute;
-        
-//           svg {
-//             width: 610px;
-//             height: 610px;
-//           }
-//         }
+      .canvas {
+        position: absolute;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+        height: 500px;
+        width: 800px;
+        margin-right: 20px;
+        margin-top: 180px;
+      }
 
-//         .secondCorner{
-//           animation-name: slideInRight;
-//           animation-duration: 2s;
-//           height: 600px;
-//           width: 600px;
+        .firstCorner{
+          animation-name: slideInLeft;
+          animation-duration: 2s;
+          height: 50px;
+          width: 100px;
+          position: absolute;
+          margin-top: 104px;
+          margin-right: 710px;
           
-//           position: absolute;
-//           top: 165px;
-//           right: 263px;
+          svg {
+            width: 300px;
+            height: 602px;
+            
+
+            line:nth-child(1) {
+              transform: translateY(70px);
+            }
+            line:nth-child(2) {
+              transform: translateX(-380px);
+            }
+          }
+        }
+
+        .secondCorner{
+          animation-name: slideInRight;
+          animation-duration: 2s;
+          height: 600px;
+          width: 600px;
           
-//           svg {
-//             width: 610px;
-//             height: 610px;
-//           }
-//         }
+          position: absolute;
+          margin-top: 200px;
+          margin-left: 110px;
+          
+          svg {
+            width: 602px;
+            height: 300px;
 
-//         .home__firstRow__callToActionButtons{
-//           animation-name: slideInBottom;
-//           animation-duration: 2.5s;
-//           display: flex;
-//           justify-content: space-evenly;
-//           width: 500px;
-//           margin-left: 50px;
-//           z-index: 9999;
-//         }
-//       }
+            line:nth-child(1) {
+              transform: translateX(300px);
+            }
+            line:nth-child(2) {
+              transform: translateY(-70px);
+            }
+          }
+        }
 
-//       .home__secondRow {
-//         display: flex;
-//         width: 100%;
-//         justify-content: space-evenly;
-//         align-items: center;
-//         margin-bottom: 50px;
+      .home__firstRow__callToActionButtons{
+        animation-name: slideInBottom;
+        animation-duration: 2.5s;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        width: 500px;
+        z-index: 10;
+        margin-top: 650px;
 
+        button {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .firstBreakLine {
+      position: absolute;
+      margin-top: 720px;
+    }
+
+    .home__secondRow {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-top: 700px;
+      
+      .home__secondRow__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .home__secondRow__description.animate{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
+          
+          .home__secondRow__description__headline{
+            color: colors.$app-blue;
+            font-family: 'EudoxusSans';
+            font-size: 12px;
+            margin-bottom: 10px;
+            padding: 0px 150px;
+          }
+
+          .home__secondRow__description__content{
+            color: colors.$darkest-blue;
+            font-family: fonts.$crimson-text;
+            font-size: 17px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 150px;
+            line-height: 25px;
+          }
+        }
+
+        .home__secondRow__image.animate{
+          animation-name: slideInRight;
+          animation-duration: 2s;
+          img {
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+            border: 4px solid colors.$app-blue;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .secondBreakLine{ 
+        margin-top: 50px;
+      }
+    }
+
+    .home__thirdRow {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-top: -50px;
+
+      .home__thirdRow__content.animate{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+
+        h1 {
+          color: colors.$app-blue;
+          font-family: 'EudoxusSans';
+          font-size: 50px;
+        }
+
+        span {
+          color: colors.$darkest-blue;
+          font-family: fonts.$crimson-text;
+          font-size: 17px;
+          padding: 0 150px;
+          line-height: 25px;
+        }
+      }
+
+      .home__thirdRow__benefits.animate {
+        padding: 0 150px;
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+      } 
+    }
+}
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      
+
+      .home__firstRow  {
+        position: absolute;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -15px;
+
+
+        .firstHeadline {
+          animation-name: slideInLeft;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 90px;
+          width: 100%;
         
-//         .home__secondRow__description.animate{
-//           display: flex;
-//           flex-direction: column;
-//           align-items: flex-start;
-//           width: 800px;
-//           animation-name: slideInLeft;
-//           animation-duration: 2s;
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 50px;
+            text-align: center;
+          }
+        }
 
-//           .home__secondRow__description__headline{
-//             color: colors.$app-blue;
-//             font-family: 'EudoxusSans';
-//             font-size: 17px;
-//             margin-bottom: 10px;
-//           }
-
-//           .home__secondRow__description__content{
-//             color: colors.$darkest-blue;
-//             font-family: fonts.$crimson-text;
-//             font-size: 25px;
-//             display: flex;
-//             flex-direction: column;
-//           }
-//         }
-
-//         .home__secondRow__image.animate{
-//           animation-name: slideInRight;
-//           animation-duration: 2s;
-//           img {
-//             margin-top: 100px;
-//             border: 4px solid colors.$app-blue;
-//             border-radius: 50%;
-//             margin-bottom: 100px;
-//           }
-//         }
-//       }
-
-//       .home__thirdRow {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         text-align: center;
-//         width: 100%;
-
-//         .home__thirdRow__content.animate{
-//           display: flex;
-//           flex-direction: column;
-//           align-items: center;
-//           text-align: center;
-//           animation-name: slideInBottom;
-//           animation-duration: 2s;
-
-//           h1 {
-//             color: colors.$app-blue;
-//             font-family: 'EudoxusSans';
-//             font-size: 50px;
-//           }
-
-//           span {
-//             color: colors.$darkest-blue;
-//             font-size: 20px;
-//             width: 800px;
-//           }
-//         }
-
-//         .home__thirdRow__benefits.animate {
-//           width: 60%;
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           flex-wrap: wrap;
-//           margin-top: 40px;
-//           animation-name: slideInBottom;
-//           animation-duration: 2s;
-//         }
+        .secondHeadline {
+          animation-name: slideInRight;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 420px;
+          width: 100%;
         
-//       }
-//     }
-// }
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 50px;
+            text-align: center;
+          }
+        }
+
+        .canvas {
+          position: absolute;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+          height: 300px;
+          width: 800px;
+          margin-right: 20px;
+          margin-top: 180px;
+        }
+
+        .firstCorner{
+          animation-name: slideInLeft;
+          animation-duration: 2s;
+          height: 50px;
+          width: 100px;
+          position: absolute;
+          margin-top: 1px;
+        
+          svg {
+            width: 710px;
+            height: 610px;
+          }
+        }
+
+        .secondCorner{
+          animation-name: slideInRight;
+          animation-duration: 2s;
+          height: 600px;
+          width: 600px;
+          
+          position: absolute;
+          margin-top: 200px;
+          margin-right: -770px;
+          
+          svg {
+            width: 610px;
+            height: 610px;
+          }
+        }
+
+        .home__firstRow__callToActionButtons{
+          animation-name: slideInBottom;
+          animation-duration: 2.5s;
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          width: 500px;
+          z-index: 10;
+          margin-top: 550px;
+
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .firstBreakLine {
+        position: absolute;
+        margin-top: 650px;
+      }
+
+      .home__secondRow {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 620px;
+
+        .home__secondRow__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .home__secondRow__description.animate{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
+            
+
+            .home__secondRow__description__headline{
+              color: colors.$app-blue;
+              font-family: 'EudoxusSans';
+              font-size: 10px;
+              margin-bottom: 10px;
+              padding: 0px 30px;
+            }
+
+            .home__secondRow__description__content{
+              color: colors.$darkest-blue;
+              font-family: fonts.$crimson-text;
+              font-size: 16px;
+              display: flex;
+              flex-direction: column;
+              padding: 0px 30px;
+              line-height: 25px;
+            }
+          }
+
+          .home__secondRow__image.animate{
+            animation-name: slideInRight;
+            animation-duration: 2s;
+            img {
+              width: 300px;
+              height: 300px;
+              margin-top: 25px;
+              border: 4px solid colors.$app-blue;
+              border-radius: 50%;
+            }
+          }
+        } 
+
+        .secondBreakLine{
+          margin-top: 50px;
+        }
+      }
+
+      .home__thirdRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: -50px;
+
+        .home__thirdRow__content.animate{
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+
+          h1 {
+            color: colors.$app-blue;
+            font-family: 'EudoxusSans';
+            font-size: 50px;
+          }
+
+          span {
+            color: colors.$darkest-blue;
+            font-size: 17px;
+            padding: 0 25px;
+            line-height: 25px;
+          }
+        }
+
+        .home__thirdRow__benefits.animate {
+          padding: 0 100px;
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 40px;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+        } 
+      }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      
+
+      .home__firstRow  {
+        position: absolute;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -15px;
+
+
+        .firstHeadline {
+          animation-name: slideInLeft;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 90px;
+          width: 100%;
+        
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 50px;
+            text-align: center;
+          }
+        }
+
+        .secondHeadline {
+          animation-name: slideInRight;
+          animation-duration: 3s;
+          position: absolute;
+          margin-top: 420px;
+          width: 100%;
+        
+          h1 {
+            font-family: "Quart";
+            font-weight: 500;
+            color: colors.$app-blue;
+            font-size: 50px;
+            text-align: center;
+          }
+        }
+
+        .canvas {
+          position: absolute;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+          height: 300px;
+          width: 800px;
+          margin-right: 20px;
+          margin-top: 180px;
+        }
+
+        .firstCorner{
+          animation-name: slideInLeft;
+          animation-duration: 2s;
+          height: 50px;
+          width: 100px;
+          position: absolute;
+          margin-top: 1px;
+        
+          
+          svg {
+            width: 710px;
+            height: 610px;
+          }
+        }
+
+        .secondCorner{
+          animation-name: slideInRight;
+          animation-duration: 2s;
+          height: 600px;
+          width: 600px;
+          
+          position: absolute;
+          margin-top: 200px;
+          margin-right: -770px;
+          
+          svg {
+            width: 610px;
+            height: 610px;
+          }
+        }
+
+        .home__firstRow__callToActionButtons{
+          animation-name: slideInBottom;
+          animation-duration: 2.5s;
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          width: 500px;
+          z-index: 10;
+          margin-top: 550px;
+
+          button {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .firstBreakLine {
+        position: absolute;
+        margin-top: 650px;
+      }
+
+      .home__secondRow {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin-top: 620px;
+        
+        .home__secondRow__content{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .home__secondRow__description.animate{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
+            
+
+            .home__secondRow__description__headline{
+              color: colors.$app-blue;
+              font-family: 'EudoxusSans';
+              font-size: 10px;
+              margin-bottom: 10px;
+              padding: 0px 30px;
+            }
+
+            .home__secondRow__description__content{
+              color: colors.$darkest-blue;
+              font-family: fonts.$crimson-text;
+              font-size: 16px;
+              display: flex;
+              flex-direction: column;
+              padding: 0px 30px;
+              line-height: 25px;
+            }
+          }
+
+          .home__secondRow__image.animate{
+            animation-name: slideInRight;
+            animation-duration: 2s;
+            img {
+              width: 300px;
+              height: 300px;
+              margin-top: 25px;
+              
+              border: 4px solid colors.$app-blue;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .secondBreakLine {
+          margin-top: 50px;
+        }
+      }
+
+
+      .home__thirdRow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: -60px;
+
+        .home__thirdRow__content.animate{
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+
+          h1 {
+            color: colors.$app-blue;
+            font-family: 'EudoxusSans';
+            font-size: 50px;
+          }
+
+          span {
+            color: colors.$darkest-blue;
+            font-size: 17px;
+            padding: 0 25px;
+            line-height: 25px;
+          }
+        }
+
+        .home__thirdRow__benefits.animate {
+          padding: 0 30px;
+          display: flex;
+          gap: 30px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 40px;
+          animation-name: slideInBottom;
+          animation-duration: 2s;
+        } 
+      }
+  }
+}

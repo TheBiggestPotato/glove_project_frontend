@@ -79,5 +79,25 @@
     "address2": "Address 2",
     "submit": "Submit",
     "successOrder": "Your order has been sent! You will be contacted by one of our colleagues shortly!",
-    "errorOrder": "Order did not send!"
+    "errorOrder": "Order did not send!",
+
+    "moreAboutUs": "More about us",
+    "seeOurProduct": "See our product",
+    "whyWouldYouChooseNitrileGloves": "Why would you choose nitrile gloves?",
+    "firstParagraphDescription": "One of the main reasons someone would choose nitrile gloves over other types of gloves is their chemical resistance. Nitrile is a synthetic rubber that is resistant to many chemicals, including oils, acids, and solvents. This makes them ideal for use in industries such as automotive, petrochemical, and laboratory settings.",
+    "secondParagraphDescription": "Nitrile gloves are also more puncture-resistant than latex gloves. This makes them a good choice for industries where there is a risk of sharp objects, such as construction or manufacturing.",
+    "thirdParagraphDescription": "Another advantage of nitrile gloves is that they are often more comfortable and provide a better fit than other types of gloves. Nitrile is a synthetic rubber that is more flexible and stretchy than natural rubber (latex), so it can conform to the hand more easily. This can help reduce hand fatigue and improve dexterity.",
+    "benefits": "Benefits",
+    "benefitsDescription": "Discover the superior quality and durability of nitrile gloves, trusted by industry experts worldwide. Experience the unmatched strength and puncture resistance of nitrile, making it the go-to choice for professionals in a variety of industries. Don't settle for less, see why industry experts choose nitrile gloves.",
+    "noAllergicReactions": "No allergic reactions",
+    "noAllergicReactionsDescription": "Nitrile is hypoallergic and does not cause rashes, itching, or any other symptom typical for a latex allergy",
+    "reliableProtection": "Reliable protection",
+    "reliableProtectionDescription": "Nitrile gloves protects you from chemical substances and acids, hazardous microorganisms, oils and petrol-based products",
+    "extremelyDurable": "Extremely durable",
+    "extremelyDurableDescription": "They are extremely resistant to tears and simultaneously, do not interfere with the tactile sensitivity of the hands in any way because they are thin and comfortable.",
+    "resistantExtremeTemperatures": "Resistant to extreme temperatures",
+    "resistantExtremeTemperaturesDescriptions": "Nitrile is a material that can resist any temperature in the range between -40 °C to +108 °C.",
+    "comfortableFittingHand": "Comfortable and fitting for any hand",
+    "comfortableFittingHandDescription": "Apart from being super durable, hypoallergic and reliable, the PPS Medical Safe Care gloves are ergonomic and a perfect fit for any hand."
+
 }

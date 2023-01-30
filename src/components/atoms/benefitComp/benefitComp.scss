@@ -1,35 +1,170 @@
 @use "../../../constants/colors";
 @use "../../../fonts/fonts.scss";
 
-.benefit {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    margin-left: 30px;
-    margin-right: 30px;
 
-    .benefit__icon{
-        width: 100px;
-        height: 100px;
-        fill: colors.$app-blue;
-        margin-bottom: -10px;
-    }
+@media only screen and (min-width: 1598px) {
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+        margin-left: 30px;
+        margin-right: 30px;
 
-    .benefit__content {
-        .benefit__content__headline {
-            font-family: "EudoxusSans";
-            color: colors.$app-blue;
-            font-size: 25px;
+        .benefit__icon{
+            width: 100px;
+            height: 100px;
+            fill: colors.$app-blue;
+            margin-bottom: -10px;
         }
 
-        .benefit__content__description {
-            margin-top: 10px;
-            font-family: fonts.$crimson-text;
-            color: colors.$darkest-blue;
-            font-size: 20px;
+        .benefit__content {
+            .benefit__content__headline {
+                font-family: "EudoxusSans";
+                color: colors.$app-blue;
+                font-size: 25px;
+            }
+
+            .benefit__content__description {
+                margin-top: 10px;
+                font-family: fonts.$crimson-text;
+                color: colors.$darkest-blue;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1183px) and (max-width: 1597px) {
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 30%;
+    
+        .benefit__icon{
+            width: 100px;
+            height: 100px;
+            fill: colors.$app-blue;
+            margin-bottom: -10px;
+        }
+    
+        .benefit__content {
+            .benefit__content__headline {
+                font-family: "EudoxusSans";
+                color: colors.$app-blue;
+                font-size: 25px;
+            }
+    
+            .benefit__content__description {
+                margin-top: 10px;
+                font-family: fonts.$crimson-text;
+                color: colors.$darkest-blue;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1183px){
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    
+        .benefit__icon{
+            width: 100px;
+            height: 100px;
+            fill: colors.$app-blue;
+            margin-bottom: -10px;
+        }
+    
+        .benefit__content {
+            .benefit__content__headline {
+                font-family: "EudoxusSans";
+                color: colors.$app-blue;
+                font-size: 25px;
+            }
+    
+            .benefit__content__description {
+                margin-top: 10px;
+                font-family: fonts.$crimson-text;
+                color: colors.$darkest-blue;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px){
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    
+        .benefit__icon{
+            width: 100px;
+            height: 100px;
+            fill: colors.$app-blue;
+            margin-bottom: -10px;
+        }
+    
+        .benefit__content {
+            .benefit__content__headline {
+                font-family: "EudoxusSans";
+                color: colors.$app-blue;
+                font-size: 25px;
+            }
+    
+            .benefit__content__description {
+                margin-top: 10px;
+                font-family: fonts.$crimson-text;
+                color: colors.$darkest-blue;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    
+        .benefit__icon{
+            width: 100px;
+            height: 100px;
+            fill: colors.$app-blue;
+            margin-bottom: -10px;
+        }
+    
+        .benefit__content {
+            .benefit__content__headline {
+                font-family: "EudoxusSans";
+                color: colors.$app-blue;
+                font-size: 25px;
+            }
+    
+            .benefit__content__description {
+                margin-top: 10px;
+                font-family: fonts.$crimson-text;
+                color: colors.$darkest-blue;
+                font-size: 20px;
+            }
         }
     }
 }

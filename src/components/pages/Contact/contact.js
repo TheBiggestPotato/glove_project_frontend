@@ -63,8 +63,8 @@ export default function Contact () {
         <div className='contact__body'>
         <div className='contact__form'>
                 <div className='contact__form__headline'>
-                <BigHeading content='Contact' color='blue'/>
-                <Line width={width < 1400 ? '200px' : '300px'} height='0.188rem'/>
+                    <BigHeading content='Contact' color='blue'/>
+                    <Line width={width < 1400 ? '200px' : '300px'} height='0.188rem'/>
                 </div>
                 <div className='contact__form__field'>
                 <form className='form' ref={form} onSubmit={sendEmail}>
