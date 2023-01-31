@@ -55,8 +55,8 @@
             animation-name: slideInLeft;
             animation-duration: 2s;
             position: absolute;
-            margin-top: 200px;
-            margin-right: 900px;
+            margin-top: 280px;
+            margin-right: 913px;
             width: 700px;
           
             h1 {
@@ -72,8 +72,8 @@
             animation-name: slideInRight;
             animation-duration: 2s;
             position: absolute;
-            margin-top: 480px;
-            margin-left: 850px;
+            margin-top: 525px;
+            margin-left: 845px;
             width: 600px;
           
             h1 {
@@ -199,9 +199,14 @@
                 border-radius: 50%;
                 margin-bottom: 50px;
                 margin-top: -40px;
-              }
+              } 
             }
           }
+
+          .secondBreakLine {
+            margin-top: 20px;
+          }
+
         }
 
         .home__thirdRow {
@@ -210,7 +215,7 @@
           align-items: center;
           text-align: center;
           width: 100%;
-          margin-top: -3.125rem;
+          margin-top: 50px;
           
           .home__thirdRow__content.animate{
             display: flex;
@@ -230,6 +235,7 @@
               color: colors.$darkest-blue;
               font-size: 20px;
               width: 800px;
+              margin-top: 30px;
             }
           }
 
@@ -270,7 +276,7 @@
           animation-name: slideInLeft;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 240px;
+          margin-top: 290px;
           margin-right: 600px;
           width: 100%;
         
@@ -287,7 +293,7 @@
           animation-name: slideInRight;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 460px;
+          margin-top: 480px;
           margin-left: 550px;
           width: 100%;
         
@@ -443,7 +449,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        margin-top: -50px;
+        margin-top: 30px;
 
         .home__thirdRow__content.animate{
           display: flex;
@@ -467,6 +473,7 @@
             font-size: 17px;
             padding: 0 210px;
             line-height: 25px;
+            margin-top: 30px;
           }
         }
 
@@ -508,7 +515,7 @@
         animation-name: slideInLeft;
         animation-duration: 3s;
         position: absolute;
-        margin-top: 240px;
+        margin-top: 290px;
         margin-right: 480px;
         width: 100%;
       
@@ -525,7 +532,7 @@
         animation-name: slideInRight;
         animation-duration: 3s;
         position: absolute;
-        margin-top: 460px;
+        margin-top: 480px;
         margin-left: 450px;
         width: 100%;
       
@@ -681,7 +688,7 @@
       align-items: center;
       text-align: center;
       width: 100%;
-      margin-top: -50px;
+      margin-top: 30px;
 
       .home__thirdRow__content.animate{
         display: flex;
@@ -705,6 +712,7 @@
           font-size: 17px;
           padding: 0 150px;
           line-height: 25px;
+          margin-top: 30px;
         }
       }
 
@@ -746,7 +754,7 @@
           animation-name: slideInLeft;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 90px;
+          margin-top: 130px;
           width: 100%;
         
           h1 {
@@ -762,7 +770,7 @@
           animation-name: slideInRight;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 420px;
+          margin-top: 450px;
           width: 100%;
         
           h1 {
@@ -902,7 +910,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        margin-top: -50px;
+       
 
         .home__thirdRow__content.animate{
           display: flex;
@@ -925,6 +933,7 @@
             font-size: 17px;
             padding: 0 25px;
             line-height: 25px;
+            margin-top: 30px;
           }
         }
 
@@ -966,7 +975,7 @@
           animation-name: slideInLeft;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 90px;
+          margin-top: 130px;
           width: 100%;
         
           h1 {
@@ -982,7 +991,7 @@
           animation-name: slideInRight;
           animation-duration: 3s;
           position: absolute;
-          margin-top: 420px;
+          margin-top: 460px;
           width: 100%;
         
           h1 {
@@ -1126,7 +1135,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        margin-top: -60px;
+        
 
         .home__thirdRow__content.animate{
           display: flex;
@@ -1149,6 +1158,7 @@
             font-size: 17px;
             padding: 0 25px;
             line-height: 25px;
+            margin-top: 30px;
           }
         }
 

@@ -1,0 +1,84 @@
+@use "../../../../../constants/colors.scss";
+@use "../../../../../fonts/fonts.scss";
+
+    .mobileFooter {
+        position: relative;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: colors.$darkest-blue;
+        height: 900px;
+    
+        .mobileFooter__background {
+            img {
+                position: absolute;
+                top: 0;
+                width: 100vw;
+                height: 200px;
+                background-color: white;
+            }
+        }
+    
+        .mobileFooter__info {
+            position: absolute;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .mobileFooter__info__logo {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                img {
+                    width: 200px;
+                }
+            }
+    
+            .mobileFooter__info__contact {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 30px;
+    
+                h2 {
+                    font-family: 'EudoxusSans';
+                    
+                }
+    
+                .mobileFooter__info___contact--row{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    span {
+                        color: white;
+                        margin-top: 10px;
+                    }
+                }
+            }
+    
+            .mobileFooter__info__list{
+                list-style: none;
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                li {
+                    margin: 8px 0;
+                }
+    
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: fonts.$crimson-text;
+                    font-size: 25px;
+                }
+            }
+        }
+    }    

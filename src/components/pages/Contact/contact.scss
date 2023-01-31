@@ -1,12 +1,33 @@
 @use "../../../constants/colors";
 @use "../../../fonts/fonts.scss";
 
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-500px);
+      opacity: 0%;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(500px);
+      opacity: 0%;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+}
+
 
 @media only screen and (min-width: 1400px) {
     .contact__body {
         display: flex;
         width: 100vw;
-        height: 100vh;
         justify-content: space-evenly;
 
         .contact__form {
@@ -14,16 +35,14 @@
             flex-direction: column;
             align-items: center;
             margin-top: 3.125rem;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
 
             .contact__form__headline{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-        
-                hr {
-                    margin-top: -1.25rem;
-                }
             }
 
             .contact__form__field {
@@ -92,17 +111,18 @@
             align-items: center;
             margin-top: 3.125rem;
             width: 31.25rem;
+            animation-name: slideInRight;
+            animation-duration: 2s;
 
-            hr {
-                margin-top: -1.25rem;
+            h1 {
+                margin-bottom: 30px;
             }
 
             .contact__info__section {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -15px;
-                height: 18.75rem;
+                
                 border-style: solid;
                 border-radius: 25px;
                 border-color: colors.$app-blue;
@@ -130,7 +150,6 @@
     .contact__body {
         display: flex;
         width: 100vw;
-        height: 100vh;
         justify-content: space-evenly;
 
         .contact__form {
@@ -139,6 +158,8 @@
             align-items: center;
             margin-top: 15px;
             width: 31.25rem;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
 
             .contact__form__headline{
                 display: flex;
@@ -146,9 +167,7 @@
                 justify-content: center;
                 align-items: center;
         
-                hr {
-                    margin-top: -1.25rem;
-                }
+              
             }
 
             .contact__form__field {
@@ -216,16 +235,14 @@
             align-items: center;
             margin-top: 15px;
             width: 31.25rem;
+            animation-name: slideInRight;
+            animation-duration: 2s;
 
-            hr {
-                margin-top: -1.25rem;
-            }
 
             .contact__info__section {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -15px;
                 height: 18.75rem;
                 border-style: solid;
                 border-radius: 25px;
@@ -263,6 +280,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 15px;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
 
             .contact__form__headline{
                 display: flex;
@@ -341,6 +360,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 3.125rem;
+            animation-name: slideInRight;
+            animation-duration: 2s;
 
             hr {
                 margin-top: -1.25rem;
@@ -353,7 +374,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -0.625rem;
+             
                 width: 400px;
                 height: 500px;
 
@@ -387,6 +408,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 15px;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
 
             .contact__form__headline{
                 display: flex;
@@ -394,9 +417,6 @@
                 justify-content: center;
                 align-items: center;
         
-                hr {
-                    margin-top: -1.25rem;
-                }
             }
 
             .contact__form__field {
@@ -465,10 +485,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 3.125rem;
-
-            hr {
-                margin-top: -1.25rem;
-            }
+            animation-name: slideInRight;
+            animation-duration: 2s;
 
             .contact__info__section {
                 border-style: solid;
@@ -477,7 +495,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -0.625rem;
                 width: 400px;
                 height: 500px;
 
@@ -511,16 +528,15 @@
             flex-direction: column;
             align-items: center;
             margin-top: 15px;
+            animation-name: slideInLeft;
+            animation-duration: 2s;
 
             .contact__form__headline{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-        
-                hr {
-                    margin-top: -1.25rem;
-                }
+
             }
 
             .contact__form__field {
@@ -589,10 +605,8 @@
             flex-direction: column;
             align-items: center;
             margin-top: 3.125rem;
-
-            hr {
-                margin-top: -1.25rem;
-            }
+            animation-name: slideInRight;
+            animation-duration: 2s;
 
             .contact__info__section {
                 border-style: solid;
@@ -601,7 +615,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                margin-top: -15px;
                 width: 300px;
                 height: 400px;
 

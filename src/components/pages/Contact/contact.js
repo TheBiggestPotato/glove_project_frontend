@@ -10,6 +10,8 @@ import Paragraph from "../../atoms/Paragraph/paragraph";
 import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
 import InputField from "../../atoms/inputField/inputField";
 import TextAreaField from "../../atoms/textAreaField/textAreaField";
+import MobileFooter from "../../organisms/Nav/footer/mobileFooter/mobileFooter";
+import Footer from "../../organisms/Nav/footer/desktopFooter/footer";
 
 import { ImLocation2 } from 'react-icons/im';
 import { GiRotaryPhone } from 'react-icons/gi';
@@ -57,11 +59,11 @@ export default function Contact () {
     };
 
     return(
-        <>
+        <div className="contact">
         {width < 992 ? <MobileHeader /> : <Nav />}
         <ToastContainer />
         <div className='contact__body'>
-        <div className='contact__form'>
+            <div className='contact__form'>
                 <div className='contact__form__headline'>
                     <BigHeading content='Contact' color='blue'/>
                     <Line width={width < 1400 ? '200px' : '300px'} height='0.188rem'/>
@@ -100,7 +102,8 @@ export default function Contact () {
             </div>  
         </div>
         </div>
-        </>
+        {width < 830 ? <MobileFooter /> : <Footer />}
+        </div>
     )
 
 }

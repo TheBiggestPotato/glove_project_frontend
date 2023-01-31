@@ -1,6 +1,50 @@
 @use "../../../constants/colors.scss";
 @use "../../../fonts/fonts.scss";
 
+
+
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-500px);
+      opacity: 0%;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(500px);
+      opacity: 0%;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(500px);
+      opacity: 0%;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+}
+
 @media only screen and (min-width: 1400px) {
     .about__body {
         display: flex;
@@ -10,14 +54,11 @@
         width: 100vw;
 
         .about__cover {
-            #imgMockup {
-                background-color: black;
-                width: 100vw;
-                height: 28.125rem;
-            }
-
+            animation-name: appear;
+            animation-duration: 2s;
             img {
-                height: 52.5rem; 
+                height: 450px;
+                width: 100vw;
             }
         }
 
@@ -27,6 +68,8 @@
             .about__info__vision {
                 width: 53.125rem;
                 height: 14.938rem;
+                animation-name: slideInLeft;
+                animation-duration: 2s;
 
                 h2 {
                     font-size: 1.25rem;
@@ -42,8 +85,11 @@
             }
 
             .about__info__values {
-                margin-top: 30px;
+                
 
+                .about__info__values__description{
+                    animation-name: slideInRight;
+                    animation-duration: 2s;
                 h2 {
                     font-size: 1.25rem;
                     font-weight: normal;
@@ -54,15 +100,19 @@
                     font-size: 1.875rem;
                     line-height: 2.1875rem;
                 }
+                }
 
                 .about__info__values__headline {
+                    
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     margin-top: 3.125rem; 
 
-                    .about__info__values__headline__section{
+                    .about__info__values__headline__section.animate{
+                        animation-name: slideInBottom;
+                    animation-duration: 2s;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -71,11 +121,13 @@
 
                     h1 {
                         font-size: 3.125rem;
+                        margin-top: 30px;
                     }
 
                     span {
                         font-size: 1.25rem;
                         text-align: center;
+                        margin-top: 20px;
                     }
 
                 }
@@ -90,13 +142,18 @@
             align-items: center;
             margin-top: 3.125rem;
 
-            .about__factory__cover {
-                background-color: black;
-                width: 100vw;
-                height: 28.125rem;
+            .about__factory__cover.animate {
+                img {
+                    animation-name: appear;
+                    animation-duration: 3s;
+                    width: 100vw;
+                    height: 450px;
+                }
             }
 
-            .about__factory__info {
+            .about__factory__info.animate {
+                animation-name: slideInRight;
+                animation-duration: 4s;
                 width: 53.125rem;
                 height: 20.25rem;
                 margin-top: 3.125rem;
@@ -113,8 +170,10 @@
                 }
             }
 
-            .about__factory__video {
+            .about__factory__video.animate {
                 margin-top: 3.125rem;
+                animation-name: slideInBottom;
+                animation-duration: 4s;
 
                 iframe {
                     width: 850px;
@@ -125,7 +184,7 @@
     }
 }
 
-@media only screen and (min-width: 922px) and (max-width: 1200px) {
+@media only screen and (min-width: 993px) and (max-width: 1399px) {
     .about__body {
         display: flex;
         flex-direction: column;
@@ -134,14 +193,10 @@
         width: 100vw;
 
         .about__cover {
-            #imgMockup {
-                background-color: black;
-                width: 100vw;
-                height: 28.125rem;
-            }
-
+            animation-name: appear;
+            animation-duration: 2s;
             img {
-                height: 52.5rem; 
+                width: 100vw;
             }
         }
 
@@ -151,6 +206,8 @@
             .about__info__vision {
                 width: 53.125rem;
                 height: 14.938rem;
+                animation-name: slideInLeft;
+                animation-duration: 2s;
 
                 h2 {
                     font-size: 1.25rem;
@@ -166,8 +223,10 @@
             }
 
             .about__info__values {
-                margin-top: 4.375rem;
-
+                
+                .about__info__values__description{
+                    animation-name: slideInRight;
+                    animation-duration: 2s;
                 h2 {
                     font-size: 1.25rem;
                     font-weight: normal;
@@ -178,6 +237,7 @@
                     font-size: 1.875rem;
                     line-height: 2.1875rem;
                 }
+            }
 
                 .about__info__values__headline {
                     display: flex;
@@ -186,7 +246,9 @@
                     align-items: center;
                     margin-top: 3.125rem; 
 
-                    .about__info__values__headline__section{
+                    .about__info__values__headline__section.animate{
+                    animation-name: slideInBottom;
+                    animation-duration: 2s;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -195,11 +257,13 @@
 
                     h1 {
                         font-size: 3.125rem;
+                        margin-top: 40px;
                     }
 
                     span {
                         font-size: 1.25rem;
                         text-align: center;
+                        margin-top: 30px;
                     }
 
                 }
@@ -214,16 +278,20 @@
             align-items: center;
             margin-top: 3.125rem;
 
-            .about__factory__cover {
-                background-color: black;
-                width: 100vw;
-                height: 28.125rem;
+            .about__factory__cover.animate {
+                animation-name: appear;
+                animation-duration: 3s;
+                img {
+                    width: 100vw;
+                }
             }
 
-            .about__factory__info {
+            .about__factory__info.animate {
                 width: 53.125rem;
                 height: 20.25rem;
                 margin-top: 3.125rem;
+                animation-name: slideInRight;
+                animation-duration: 4s;
 
                 h2 {
                     font-size: 1.25rem;
@@ -237,8 +305,10 @@
                 }
             }
 
-            .about__factory__video {
+            .about__factory__video.animate {
                 margin-top: 3.125rem;
+                animation-name: slideInBottom;
+                animation-duration: 4s;
 
                 iframe {
                     width: 850px;
@@ -256,14 +326,10 @@
         width: 100vw;
 
         .about__cover {
-            #imgMockup {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
-            }
-
+            animation-name: appear;
+            animation-duration: 2s;
             img {
-                height: 52.5rem; 
+                width: 100vw;
             }
         }
 
@@ -272,6 +338,8 @@
 
             .about__info__vision {
                 padding: 0px 100px;
+                animation-name: slideInLeft;
+                animation-duration: 2s;
 
                 h2 {
                     font-size: 15px;
@@ -290,6 +358,9 @@
                 margin-top: 50px;
                 padding: 0px 100px;
 
+                .about__info__values__description{
+                    animation-name: slideInRight;
+                    animation-duration: 2s;
                 h2 {
                     font-size: 15px;
                     font-weight: normal;
@@ -300,6 +371,7 @@
                     font-size: 20px;
                     line-height: 2.1875rem;
                 }
+            }
 
                 .about__info__values__headline {
                     display: flex;
@@ -308,7 +380,9 @@
                     align-items: center;
                     margin-top: 3.125rem; 
 
-                    .about__info__values__headline__section{
+                    .about__info__values__headline__section.animate{
+                    animation-name: slideInBottom;
+                    animation-duration: 2s;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -316,11 +390,13 @@
 
                     h1 {
                         font-size: 25px;
+                        margin-top: 40px;
                     }
 
                     span {
                         font-size: 20px;
                         text-align: center;
+                        margin-top: 30px;
                     }
 
                 }
@@ -335,16 +411,20 @@
             align-items: center;
             margin-top: 3.125rem;
 
-            .about__factory__cover {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
+            .about__factory__cover.animate {
+                animation-name: appear;
+                    animation-duration: 3s;
+                img {
+                    width: 100vw;
+                }
             }
 
-            .about__factory__info {
+            .about__factory__info.animate {
                 height: 20.25rem;
                 margin-top: 3.125rem;
                 padding: 0px 100px;
+                animation-name: slideInRight;
+                animation-duration: 4s;
 
                 h2 {
                     font-size: 15px;
@@ -358,8 +438,10 @@
                 }
             }
 
-            .about__factory__video {
+            .about__factory__video.animate {
                 margin-top: 10px;
+                animation-name: slideInBottom;
+                animation-duration: 4s;
 
                 iframe {
                     width: 650px;
@@ -377,14 +459,10 @@
         width: 100vw;
 
         .about__cover {
-            #imgMockup {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
-            }
-
+            animation-name: appear;
+            animation-duration: 2s;
             img {
-                height: 52.5rem; 
+                width: 100vw;
             }
         }
 
@@ -393,6 +471,8 @@
 
             .about__info__vision {
                 padding: 0px 30px;
+                animation-name: slideInLeft;
+                animation-duration: 2s;
 
                 h2 {
                     font-size: 15px;
@@ -411,6 +491,9 @@
                 margin-top: 50px;
                 padding: 0px 30px;
 
+                .about__info__values__description{
+                    animation-name: slideInRight;
+                    animation-duration: 2s;
                 h2 {
                     font-size: 15px;
                     font-weight: normal;
@@ -421,6 +504,7 @@
                     font-size: 20px;
                     line-height: 2.1875rem;
                 }
+            }
 
                 .about__info__values__headline {
                     display: flex;
@@ -429,7 +513,9 @@
                     align-items: center;
                     margin-top: 3.125rem; 
 
-                    .about__info__values__headline__section{
+                    .about__info__values__headline__section.animate{
+                    animation-name: slideInBottom;
+                    animation-duration: 2s;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -437,11 +523,13 @@
 
                     h1 {
                         font-size: 25px;
+                        margin-top: 40px;
                     }
 
                     span {
                         font-size: 20px;
                         text-align: center;
+                        margin-top: 30px;
                     }
 
                 }
@@ -456,16 +544,20 @@
             align-items: center;
             margin-top: 3.125rem;
 
-            .about__factory__cover {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
+            .about__factory__cover.animate {
+                animation-name: appear;
+                    animation-duration: 3s;
+                img {
+                    width: 100vw;
+                }
             }
 
-            .about__factory__info {
+            .about__factory__info.animate {
                 height: 20.25rem;
                 margin-top: 3.125rem;
                 padding: 0px 30px;
+                animation-name: slideInRight;
+                animation-duration: 4s;
 
                 h2 {
                     font-size: 15px;
@@ -479,7 +571,9 @@
                 }
             }
 
-            .about__factory__video {
+            .about__factory__video.animate {
+                animation-name: slideInBottom;
+                animation-duration: 4s;
                 iframe {
                     width: 650px;
                     height: 400px;
@@ -497,14 +591,11 @@
         width: 100vw;
 
         .about__cover {
-            #imgMockup {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
-            }
-
+            animation-name: appear;
+            animation-duration: 2s;
             img {
-                height: 52.5rem; 
+                width: 100vw;
+                height: 125px;
             }
         }
 
@@ -513,6 +604,8 @@
 
             .about__info__vision {
                 padding: 0px 30px;
+                animation-name: slideInLeft;
+                animation-duration: 2s;
 
                 h2 {
                     font-size: 15px;
@@ -531,6 +624,10 @@
                 margin-top: 50px;
                 padding: 0px 30px;
 
+                .about__info__values__description{
+                    animation-name: slideInRight;
+                    animation-duration: 2s;
+
                 h2 {
                     font-size: 15px;
                     font-weight: normal;
@@ -541,6 +638,7 @@
                     font-size: 20px;
                     line-height: 2.1875rem;
                 }
+            }
 
                 .about__info__values__headline {
                     display: flex;
@@ -549,7 +647,9 @@
                     align-items: center;
                     margin-top: 3.125rem; 
 
-                    .about__info__values__headline__section{
+                    .about__info__values__headline__section.animate{
+                    animation-name: slideInBottom;
+                    animation-duration: 2s;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -557,11 +657,13 @@
 
                     h1 {
                         font-size: 25px;
+                        margin-top: 40px;
                     }
 
                     span {
                         font-size: 20px;
                         text-align: center;
+                        margin-top: 30px;
                     }
 
                 }
@@ -576,17 +678,22 @@
             align-items: center;
             margin-top: 3.125rem;
 
-            .about__factory__cover {
-                background-color: black;
-                width: 100vw;
-                height: 250px;
+            .about__factory__cover.animate {
+                animation-name: appear;
+                    animation-duration: 3s;
+                img {
+                    width: 100vw;
+                    height: 125px;
+                }
             }
 
-            .about__factory__info {
+            .about__factory__info.animate {
                 height: 20.25rem;
-                margin-top: 3.125rem;
+                margin-top: 20px;
                 padding: 0px 30px;
                 margin-bottom: 20px;
+                animation-name: slideInRight;
+                animation-duration: 4s;
 
                 h2 {
                     font-size: 15px;
@@ -600,15 +707,17 @@
                 }
             }
 
-            .about__factory__video {
+            .about__factory__video.animate {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin: 200px;
+                margin-top: 150px;
+                margin-bottom: 50px;
+                animation-name: slideInBottom;
+                animation-duration: 4s;
                 
                 iframe {
-                    width: 300px;
-                    height: 200px;
+                    width: 90vw;
                     min-height: 100%;
                 }
             }

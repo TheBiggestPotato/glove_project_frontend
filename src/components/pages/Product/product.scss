@@ -1,14 +1,60 @@
 @use "../../../constants/colors";
 @use "../../../fonts/fonts.scss";
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-500px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(500px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(500px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 @media only screen and (min-width: 1400px) {
 .product {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 .product__body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
 
@@ -17,31 +63,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -60px;
+    margin-bottom: -30px;
     margin-top: 30px;
+    animation-name: appear;
+    animation-duration: 2s;
+
+    h2 {
+      font-family: 'EudoxusSans';
+    }
   }
 
   .product__firstLine{
     display: flex;
     justify-content: space-evenly;
     width: 99.7vw;
+    margin-bottom: 50px;
 
     .canvas {
       height: 30.313rem;
-      width: 43.75rem;
+      width: 36.45%;
       max-width: 100%;
       margin-top: 4.688rem;
       border-style: solid;
       border-radius: 6.25rem;
       border-width: 0.125rem;
       border-color: colors.$app-blue;
+      animation-name: slideInLeft;
+      animation-duration: 2s;
     }
 
     .product__characteristics {
       display: block;
-      width: 36.625rem;
+      width: 30.52%;
       height: 30.313rem;
       margin-top: 140px;
+      animation-name: slideInRight;
+      animation-duration: 2s;
 
       h2 {
         font-size: 2.188rem;
@@ -85,58 +142,75 @@
     justify-content: center;
     align-items: center;
     flex-wrap: flex;
+    animation-name: slideInBottom;
+    animation-duration: 2s;
+    margin-top: 25px;
   }
 
   .product__secondLine {
     display: flex;
     justify-content: space-evenly;
-    width: 99.7vw;
-    margin-top: 20px;
+    width: 100vw;
+    margin-top: 100px;
 
-    .product__description {
+    .product__description.animate {
+      animation-name: slideInLeft;
+      animation-duration: 2s;
       margin-top: 6.25rem;
-      width: 43.75rem;
+      width: 36.45%;
       font-size: 1.375rem;
     }
 
-    .product_boxImage {
+    .product__boxImage.animate {
         margin-top: 3.125rem;
+        width: 30.52%;
+        animation-name: slideInRight;
+        animation-duration: 2s;
 
       img {
         margin-top: -30px;
         height: 28.125rem;
-        max-width: 100%;
+        width: 100%;
       }
     }
   }
 
-  .product__thirdLine {
+  .product__thirdLine.animate {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    flex-shrink: 4;
-    width: 93.75rem;
-    margin-left: 12.5rem;
-    margin-top: 4.688rem;
-    font-size: 1.375rem;
+    align-items: flex-start;
+    width: 78%;
+    font-size: 22px;
     line-height: 1.875rem;
+    animation-name: slideInBottom;
+    animation-duration: 2s;
   }
 
-  .product__fourthLine {
-    margin-top: 4.688rem;
-    width: 62.5rem;
+  .product__fourthLine.animate {
+    margin-top: 100px;
+    width: 52.08%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    animation-name: slideInBottom;
+    animation-duration: 2s;
+    margin-bottom: 50px;
     
     .advantages {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
+      h1 {
+        margin-top: 30px;
+        font-family: 'EudoxusSans';
+      }
 
       span {
-        margin-top: 0.625rem;
-        margin-bottom: 0.625rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
         font-size: 1.375rem;
       }
     }
@@ -165,6 +239,7 @@
     .product__body {
       display: flex;
       flex-direction: column;
+      align-items: center;
       
       .product__headline {
         font-size: 30px;
@@ -172,31 +247,40 @@
         justify-content: center;
         margin-bottom: -60px;
         margin-top: 30px;
+        animation-name: appear;
+        animation-duration: 2s;
+
+        h2 {
+          font-family: 'EudoxusSans';
+        }
       }
     
       .product__firstLine{
         display: flex;
         justify-content: space-evenly;
         width: 100vw;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
         
         .canvas {
           height: 30.313rem;
-          width: 500px;
+          width: 35.73%;
           max-width: 100%;
           margin-top: 4.688rem;
           border-style: solid;
           border-radius: 6.25rem;
           border-width: 0.125rem;
           border-color: colors.$app-blue;
-          
+          animation-name: slideInLeft;
+          animation-duration: 2s;
         }
     
         .product__characteristics {
-          width: 400px;
+          width: 28.59%;
           height: 30.313rem;
           margin-top: 110px;
           margin-left: 100px;
+          animation-name: slideInRight;
+          animation-duration: 2s;
     
           h2 {
             font-size: 2.188rem;
@@ -240,6 +324,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: flex;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
       }
     
       .product__secondLine {
@@ -247,59 +333,76 @@
         justify-content: space-evenly;
         margin-top: 20px;
     
-        .product__description {
-          margin-top: 6.25rem;
-          width: 500px;
+        .product__description.animate {
+          margin-top: 50px;
+          width: 35.73%;
+          min-width: 1%;
           font-size: 1.375rem;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
         }
     
-        .product_boxImage {
+        .product__boxImage.animate {
             margin-top: 3.125rem;
+            width: 35.73%;
+            animation-name: slideInRight;
+            animation-duration: 2s;
     
           img {
             margin-top: -30px;
-            height: 400px;
-            width: 500px;
+            width: 100%;
           }
         }
       }
     
-      .product__thirdLine {
+      .product__thirdLine.animate {
         margin-top: 4.688rem;
         font-size: 1.375rem;
         line-height: 1.875rem;
-        padding: 0 65px;
+        width: 81%;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
       }
     
-      .product__fourthLine {
+      .product__fourthLine.animate {
         margin-top: 4.688rem;
         width: 62.5rem;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+        margin-bottom: 50px;
         
         .advantages {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
+          h1 {
+            margin-top: 30px;
+          }
     
           span {
-            margin-top: 0.625rem;
-            margin-bottom: 15px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             font-size: 1.375rem;
           }
         }
     
-        button {
-          margin-top: 1.25rem;
+        .product__fourthLine__buttons {
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          gap: 30px;
         }
       }
     }
     }
   }
 
-  @media only screen and (min-width: 769px) and (max-width: 992px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .product {
       display: flex;
       flex-direction: column;
@@ -310,6 +413,19 @@
      flex-direction: column;
      align-items: center;
      justify-content: center;
+
+     .product__headline {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        animation-name: appear;
+        animation-duration: 2s;
+
+        h2 {
+          font-family: 'EudoxusSans';
+          font-weight: 900;
+          font-size: 30px;
+        }
+     }
   
       .product__firstLine{
         display: flex;
@@ -317,31 +433,33 @@
         align-items: center;
         justify-content: center;
         margin-top: 15px;
-        width: 100vw;
+        width: 100%;
         
         .canvas {
           height: 300px;
-          width: 500px;
+          width: 50.4%;
           border-style: solid;
           border-radius: 75px;
           border-width: 0.125rem;
           border-color: colors.$app-blue;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
         }
   
         .product__characteristics {
           display: flex;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
           margin-top: 30px;
-          width: 100vw;
+          width: 100%;
+          animation-name: slideInRight;
+          animation-duration: 2s;
   
           .product__characteristics__paragraph {
-        
-  
+            width: 70%;
+
             ol {
               list-style-type: none;
-              padding: 0px 100px;
               margin-left: 50px;
               counter-reset: li;
   
@@ -367,6 +485,13 @@
           }
         }
       }
+      
+      .product__thematicBrake {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        animation-name: slideInRight;
+        animation-duration: 2s;
+      }
   
       .product__secondLine {
         margin-top: 20px;
@@ -374,36 +499,49 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: 100%;
     
         .product__description {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
           font-size: 15px;
-          padding: 0px 117px;
           margin-left: 10px;
+          width: 66%;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
         }
     
-        .product_boxImage {
+        .product__boxImage {
+          animation-name: slideInRight;
+          animation-duration: 2s;
+          display: flex;
+          justify-content: center;
+          
           img {
-            width: 300px;
-            height: 220px;
-            max-width: 100%;
-            right: 40px;
+            width: 70%;
             margin-top: 15px;
           }
         }
       }
   
-      .product__thirdLine {
+      .product__thirdLine.animate {
         margin-top: 30px;
         font-size: 15px;
-        padding: 0px 125px;
+        width: 62%;
         margin-left: 10px;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
       }
   
-      .product__fourthLine {
+      .product__fourthLine.animate {
         width: 100vw;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 50px;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+        margin-bottom: 50px;
         
         .advantages {
           display: flex;
@@ -423,6 +561,14 @@
             font-size: 15px;
           }
         }
+
+        .product__fourthLine__buttons {
+          width: 100%;
+          margin-top: 10px;
+          display: flex;
+          justify-content: center;
+          gap: 30px;
+        }
       }
     }
   }
@@ -434,11 +580,21 @@
     flex-direction: column;
   
     .product__body {
-    margin-top: 10px;
+     margin-top: 10px;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
+
+     .product__headline {
+        margin-top: 30px;
+        animation-name: appear;
+        animation-duration: 2s;
+
+        h2 {
+          font-family: 'EudoxusSans';
+        }
+     }
   
       .product__firstLine{
         display: flex;
@@ -454,6 +610,8 @@
           border-radius: 75px;
           border-width: 0.125rem;
           border-color: colors.$app-blue;
+          animation-name: slideInRight;
+          animation-duration: 2s;
         }
   
         .product__characteristics {
@@ -462,9 +620,11 @@
           align-items: center;
           justify-content: center;
           margin-top: 30px;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
   
           .product__characteristics__paragraph {
-            width: 100vw;
+            width: 90%;
   
             ol {
               list-style-type: none;
@@ -494,6 +654,13 @@
           }
         }
       }
+
+      .product__thematicBrake {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        animation-name: slideInRight;
+        animation-duration: 2s;
+      }
   
       .product__secondLine {
         margin-top: 20px;
@@ -503,13 +670,18 @@
         align-items: center;
         width: 100vw;
     
-        .product__description {
+        .product__description.animate {
           font-size: 15px;
           padding: 0px 45px;
           margin-left: 10px;
+          width: 75%;
+          animation-name: slideInLeft;
+          animation-duration: 2s;
         }
     
-        .product_boxImage {
+        .product__boxImage.animate {
+          animation-name: slideInRight;
+          animation-duration: 2s;
           img {
             width: 300px;
             height: 220px;
@@ -519,17 +691,24 @@
         }
       }
   
-      .product__thirdLine {
+      .product__thirdLine.animate {
         margin-top: 30px;
         font-size: 15px;
         padding: 0px 45px;
         margin-left: 10px;
+        width: 75%;
+        margin-bottom: 30px;
+        animation-name: slideInLeft;
+        animation-duration: 2s;
       }
   
-      .product__fourthLine {
+      .product__fourthLine.animate {
         width: 100vw;
         text-align: center;
         margin-top: 20px;
+        animation-name: slideInBottom;
+        animation-duration: 2s;
+        margin-bottom: 50px;
         
         .advantages {
           display: flex;
@@ -566,12 +745,27 @@
    align-items: center;
    justify-content: center;
 
+   .product__headline{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    animation-name: appear;
+    animation-duration: 2s;
+
+    h2 {
+      font-family: 'EudoxusSans';
+      font-size: 30px;
+    }
+   }
+
     .product__firstLine{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin-top: 15px;
+      margin-bottom: 30px;
       
       .canvas {
         height: 200px;
@@ -580,6 +774,8 @@
         border-radius: 75px;
         border-width: 0.125rem;
         border-color: colors.$app-blue;
+        animation-name: slideInLeft;
+        animation-duration: 2s;
       }
 
       .product__characteristics {
@@ -588,6 +784,8 @@
         align-items: center;
         justify-content: center;
         margin-top: 30px;
+        animation-name: slideInRight;
+        animation-duration: 2s;
 
         .product__characteristics__paragraph {
           width: 100vw;
@@ -629,13 +827,17 @@
       align-items: center;
       width: 100vw;
   
-      .product__description {
+      .product__description.animate {
         font-size: 15px;
         padding: 0px 45px;
         margin-left: 10px;
+        animation-name: slideInLeft;
+        animation-duration: 2s;
       }
   
-      .product_boxImage {
+      .product__boxImage.animate {
+        animation-name: slideInRight;
+        animation-duration: 2s;
         img {
           width: 300px;
           height: 220px;
@@ -646,17 +848,22 @@
       }
     }
 
-    .product__thirdLine {
+    .product__thirdLine.animate {
       margin-top: 30px;
       font-size: 15px;
       padding: 0px 45px;
       margin-left: 10px;
+      animation-name: slideInBottom;
+      animation-duration: 2s;
     }
 
-    .product__fourthLine {
+    .product__fourthLine.animate {
       width: 100vw;
       text-align: center;
       margin-top: 20px;
+      animation-name: slideInBottom;
+      animation-duration: 2s;
+      margin-bottom: 50px;
       
       .advantages {
         display: flex;

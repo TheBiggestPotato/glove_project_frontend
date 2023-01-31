@@ -9,11 +9,15 @@ import Line from "../../atoms/Line/line";
 import valuesData from './aboutValuesData';
 import Video from "../../atoms/Video/video";
 import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
+import MobileFooter from "../../organisms/Nav/footer/mobileFooter/mobileFooter";
+import Footer from "../../organisms/Nav/footer/desktopFooter/footer";
 
-import coverPhoto from '../../../assets/images/coverPhotoAboutMockup.png'
+import headerFactory from '../../../assets/images/header1.png'
+import headerAbout from '../../../assets/images/header2.2.png'
 
 import './about.scss';
 import useWindowDimensions from "../../../functions/getWindowDimensions";
+import { useInView } from 'react-intersection-observer';
 
 export default function About () {
 
@@ -21,13 +25,22 @@ export default function About () {
 
     const { t } = useTranslation();
 
+    const [refValuesHeadline, inViewValuesHeadline] = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
+    const [refFactory, inViewFactory] = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     return(
         <div className="about">
             {width < 992 ? <MobileHeader /> : <Nav />}
             <div className='about__body'>
                 <div className='about__cover'>
-                    {/* <img src={coverPhoto} alt='aboutCoverPhoto' /> */}
-                    <div id='imgMockup'/>
+                    <img src={headerAbout} alt='aboutCoverPhoto' />
                 </div>
                 <div className='about__info'>
                     <div className='about__info__vision'>
@@ -37,12 +50,14 @@ export default function About () {
                     />
                     </div>
                     <div className='about__info__values'>
+                    <div className="about__info__values__description">
                     <SmallHeading content={t('values')} color='blue'/>
                     <Paragraph content={t('valuesContent')}/>
-                    <div className='about__info__values__headline'>
+                    </div>
+                    <div ref={refValuesHeadline} className={`about__info__values__headline`}>
                     {valuesData.map((section) => {
                         return(
-                        <div key={section.id} className='about__info__values__headline__section'>
+                        <div key={section.id} className={`about__info__values__headline__section ${inViewValuesHeadline ? 'animate' : ''}`}>
                         <Line width={width < 922 ? '300px' : '340px'} height='0.125rem' color='blue'/>
                         <BigHeading  content={t(section.heading)} color='darkestBlue'/>
                         <Paragraph content={t(section.content)}/>
@@ -55,19 +70,22 @@ export default function About () {
                     </div>
                     </div>
                 </div>
-                <div className='about__factory'>
-                    <div className='about__factory__cover'/>
-                    <div className='about__factory__info'>
+                <div className='about__factory' ref={refFactory}>
+                    <div className={`about__factory__cover ${inViewFactory ? 'animate' : ''}`}>
+                        <img src={headerFactory} alt='aboutFactoryCover' />
+                    </div>
+                    <div className={`about__factory__info ${inViewFactory ? 'animate' : ''}`}>
                     <SmallHeading content={t('factory')} color='blue'/>
                     <Paragraph 
                     content={t('factoryContent')}
                     />
                     </div>
-                    <div className='about__factory__video'>
+                    <div className={`about__factory__video ${inViewFactory ? 'animate' : ''}`}>
                         <Video embedId="jUBx9-OGNEM"/>
                     </div>
                 </div>
             </div>
+            {width < 830 ? <MobileFooter /> : <Footer />}
         </div>
     )
 }

@@ -1,10 +1,18 @@
 @use "../../../constants/colors";
 @use "../../../fonts/fonts.scss";
 
-.transition {
-  transition: all 0.25s cubic-bezier(.53,.01,.35,1.5)
+@keyframes slideInBottom {
+  from {
+    transform: translateY(500px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
 }
 
+@media only screen and (min-width: 736px) {
 .order {
   display: flex;
   flex-direction: column;
@@ -16,12 +24,18 @@
     align-items: center;
     max-width: 800px;
     min-width: 600px; 
+    margin-bottom: 50px;
+    animation-name: slideInBottom;
+    animation-duration: 2s;
+
+    .order__body__headline {
+      margin: 15px 0;
+    }
 
     form {
       width: 700px;
       border: 3px solid colors.$darker-blue;
       border-radius: 40px;
-      margin-top: -20px;
 
        .order__body__form__input {
           position: relative;
@@ -36,7 +50,7 @@
           }
             
           label {
-            @extend .transition;
+            transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
             transform-origin: left center;
             color: colors.$app-blue;
             font-weight: 600;
@@ -52,7 +66,7 @@
           }
 
           input {
-            @extend .transition;
+            transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
             appearance: none;
             background-color: none;
             border: 1px solid colors.$app-blue;
@@ -104,20 +118,13 @@
           margin-left: 40px;
 
           h2 {
-            margin-bottom: 1px;
+            margin-top: 20px;
             padding: 0 18px;
           }
 
           label {
              padding: 12px 20px;
           }
-
-          // .order__body__form__phoneInput{
-          //   border: 1px solid colors.$app-blue;
-          //   border-radius: 60px;
-          //   width: 600px;
-          //   outline: none;
-          // }
 
           .PhoneInput{
             width: 600px;
@@ -126,7 +133,7 @@
             border-radius: 60px;
 
             .PhoneInputInput {
-            @extend .transition;
+            transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
             border: none;
             font-size: 17px;
             width: 100%;
@@ -165,7 +172,7 @@
           margin-left: 40px;
 
           h2 {
-            margin-bottom: 1px;
+            margin-top: 20px;
             padding: 0 18px;
           }
 
@@ -182,7 +189,8 @@
 
             h2 {
               margin-left: 40px;
-              margin-bottom: 11px;
+              margin-top: 20px;
+              margin-bottom: 10px;
               padding: 0 19px;
             }
 
@@ -250,3 +258,262 @@
     }
   }
 }
+}
+
+@media only screen and (max-width: 735px) {
+  .order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .order__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      margin-bottom: 50px;
+      animation-name: bottom;
+      animation-duration: 2s;
+
+      .order__body__headline {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 30px;
+        }
+      }
+  
+      form {
+        width: 100%;
+        border: 3px solid colors.$darker-blue;
+        border-radius: 40px;
+  
+         .order__body__form__input {
+            position: relative;
+            padding: 10px 0;
+  
+            &:first-of-type {
+              padding-top: 20;
+            }
+  
+            &:last-of-type {
+              padding-bottom: 0;
+            }
+              
+            label {
+              transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+              transform-origin: left center;
+              color: colors.$app-blue;
+              font-weight: 600;
+              letter-spacing: 0.01em;
+              font-size: 17px;
+              box-sizing: border-box;
+              padding: 10px 15px;
+              display: block;
+              position: absolute;
+              margin-top: -5px;
+              z-index: 2;
+              pointer-events: none;
+            }
+  
+            input {
+              transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+              appearance: none;
+              background-color: none;
+              border: 1px solid colors.$app-blue;
+              line-height: 0;
+              font-size: 17px;
+              width: 100%;
+              display: block;
+              box-sizing: border-box;
+              padding: 10px 20px;
+              border-radius: 60px;
+              color: colors.$app-blue;
+              font-weight: 500;
+              font-style: fonts.$crimson-text;
+              letter-spacing: 0.01em;
+              position: relative;
+              z-index: 1; 
+                
+              &:focus {
+                outline: none;
+                background: colors.$app-blue;
+                color: white;
+                margin-top: 30px;
+              }
+    
+              &:focus + label {
+                transform: translate( 0 , -35px );
+              }
+    
+              &:valid{
+                margin-top: 30px;
+                background: colors.$app-blue;
+                color: white;
+              }
+                
+              &:valid ~ label {
+                text-transform: uppercase;
+                font-style: italic;
+                transform: scale(0.6) translate( 5px , -35px ) ;
+              }
+            }
+            
+            input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+  
+          .order__body__form__contactInfo {
+            margin-left: 20px;
+  
+            h2 {
+              margin-top: 20px;
+              padding: 0 18px;
+            }
+  
+            label {
+               padding: 12px 20px;
+            }
+  
+            .PhoneInput{
+              width: 300px;
+              height: 40px;
+              border: 1px solid colors.$app-blue;
+              border-radius: 60px;
+  
+              .PhoneInputInput {
+              transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+              border: none;
+              font-size: 17px;
+              width: 100%;
+              display: block;
+              box-sizing: border-box;
+              padding: 10px 10px;
+              border-radius: 60px;
+              color: colors.$app-blue;
+              font-weight: 500;
+              font-style: fonts.$crimson-text;
+              letter-spacing: 0.01em;
+  
+                &:focus{
+                  background-color: colors.$app-blue;
+                  color: white;
+                  outline: none;
+                  padding: 10px 10px;
+                }
+  
+                &:valid{
+                  background-color: colors.$app-blue;
+                  color: white;
+                  outline: none;
+                  padding: 10px 10px;
+                }
+              }
+  
+              .PhoneInputCountry {
+                border: none;
+                padding-left: 20px;
+              }
+            }
+          }
+  
+          .order__body__form__quantity {
+            margin-left: 20px;
+  
+            h2 {
+              margin-top: 20px;
+              padding: 0 18px;
+            }
+  
+            label {
+               padding: 12px 20px;
+            }
+          }
+        
+  
+          .order__body__form__address {
+            display: flex;
+            flex-direction: column;
+            
+  
+              h2 {
+                margin-left: 20px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                padding: 0 19px;
+              }
+  
+              .order__body__form__address--firstRow {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-left: 20px;
+  
+                .order__body__form__address__regionDropdown {
+                  width: 300px;
+                  height: 40px;
+                  padding: 0 10px;
+                  border-radius: 60px;
+                  border: 1px solid colors.$app-blue;
+                  color: colors.$app-blue;
+                  font-family: fonts.$crimson-text;
+                  font-size: 17px;
+                  font-weight: 600;
+  
+                  &:focus {
+                    border-color: colors.$app-blue;
+                    outline: none;
+                  }
+  
+                  &:valid {
+                    border-color: colors.$app-blue;
+                  }
+                }
+             } 
+  
+             .order__body__form__address--secondRow {
+               display: flex;
+               flex-direction: column;
+               width: 100%;
+               margin-top: 10px;
+               margin-left: 20px;
+  
+               label {
+                 padding: 12px 20px;
+               }
+             }
+  
+             .order__body__form__address--thirdRow {
+               display: flex;
+               flex-direction: column;
+               justify-content: space-evenly;
+               margin-left: 20px;
+  
+               label {
+                 padding: 12px 20px;
+               }
+             }
+         }
+  
+         .orderButton {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 20px;
+  
+          button {
+            margin-top: 20px;
+          }
+         }
+      }
+    }
+  }
+  }

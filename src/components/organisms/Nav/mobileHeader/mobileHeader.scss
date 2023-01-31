@@ -5,7 +5,7 @@
     display: flex;
     position: sticky;
     background-color: white;
-    z-index: 9999;
+    z-index: 999999;
     width: 100vw;
     border-bottom: 3px solid colors.$app-blue;
     transition-property: all; 
@@ -67,7 +67,7 @@
     
             a {
                 text-decoration: none;
-                color: black;
+                color: colors.$darkest-blue;
                 font-weight: bold;
                 font-family: fonts.$crimson-text;
                 font-size: 25px;

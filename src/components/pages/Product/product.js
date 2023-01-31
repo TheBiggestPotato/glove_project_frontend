@@ -13,10 +13,13 @@ import SmallHeading from '../../atoms/SmallHeading/smallHeading';
 import Line from '../../atoms/Line/line';
 import RoundButton from "../../atoms/RoundButton/roundButton";
 import Paragraph from "../../atoms/Paragraph/paragraph";
+import MobileFooter from "../../organisms/Nav/footer/mobileFooter/mobileFooter";
+import Footer from "../../organisms/Nav/footer/desktopFooter/footer";
 
 import boxProduct from "../../../assets/images/boxProduct.png"; 
 
 import { Canvas } from "@react-three/fiber";
+import { useInView } from 'react-intersection-observer';
 import logo from "../../../assets/images/logo.png";
 
 export default function Product () {
@@ -24,6 +27,16 @@ export default function Product () {
     const { height, width } = useWindowDimensions();
 
     const { t } = useTranslation()
+
+    const [refSecondRow, inViewSecondRow] = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
+    const [refFourthRow, inViewFourthRow] = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
 
     return (
         <div className="product">
@@ -72,8 +85,8 @@ export default function Product () {
             <div className="product__thematicBrake">
             <Line width={width <= 992 ? '150px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
             </div>
-            <div className={'product__secondLine'}>
-                <div className={'product__description'}>
+            <div className={'product__secondLine'}   ref={refSecondRow}>
+                <div className={`product__description ${inViewSecondRow ? 'animate' : ''}`}>
                     <ColoredWordText
                     firstWord={t('gloveType')}
                     content={t('gloveTypeContent')}
@@ -103,11 +116,11 @@ export default function Product () {
                         content={t('gloveAvailableSizesContent')}
                     />
                 </div>
-                <div className={"product_boxImage"}>
+                <div className={`product__boxImage ${inViewSecondRow ? 'animate' : ''}`}>
                     <img src={boxProduct} alt={"logo"}></img>
                 </div>
             </div>
-                <div className={'product__thirdLine'}>
+                <div className={`product__thirdLine ${inViewSecondRow ? 'animate' : ''}`}>
                     <ColoredWordText
                         firstWord={t('gloveLabelingCompliance')}
                         content={t('gloveLabelingComplianceContent')}
@@ -117,7 +130,7 @@ export default function Product () {
                         content={t('glovePurposeContent')}
                     />
                 </div>
-                <div className={'product__fourthLine'}>
+                <div className={`product__fourthLine ${inViewFourthRow ? 'animate' : ''}`} ref={refFourthRow}>
                     <div className="advantages">
                     <Line width={width < 992 ? '266px': '640px'} height={width < 992 ? '2px' : '3px'} color='blue'/>
                     <BigHeading color='blue' fontWeight='bold' content={t('gloveAdvantages')} />
@@ -135,6 +148,7 @@ export default function Product () {
                     </div>
                 </div>
             </div>
+            {width < 830 ? <MobileFooter /> : <Footer />}
         </div>
     )
 };

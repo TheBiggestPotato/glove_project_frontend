@@ -11,6 +11,8 @@ import useScrollDirection from '../../../functions/useScrollDirection'
 import { Canvas } from "@react-three/fiber";
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from "react-i18next";
+import MobileFooter from "../../organisms/Nav/footer/mobileFooter/mobileFooter";
+import Footer from "../../organisms/Nav/footer/desktopFooter/footer";
 
 import {ReactComponent as AllergiesLogo} from '../../../assets/icons/allergies.svg';
 import {ReactComponent as ProtectionLogo} from '../../../assets/icons/protection.svg';
@@ -76,7 +78,7 @@ const Home = () => {
         <RoundButton label={t('seeOurProduct')} buttonType={"first"} padding='15px 25px' route='/product'/>
         </div>
       </div>
-      <Line width={width < 600 ? '250px' : '800px'} height='3px' color='blue' className='firstBreakLine'/>
+      <Line width={width < 1200 ? '300px' : '800px'} height='3px' color='blue' className='firstBreakLine'/>
       <div className="home__secondRow" ref={refSecondRow}>
         <div className="home__secondRow__content">
         <div className={`home__secondRow__description ${inViewSecondRow ? 'animate' : ''}`}>
@@ -95,9 +97,8 @@ const Home = () => {
         <img src={gloveHeroTitle} alt='gloveImg'/>
         </div>
         </div>
-        <Line width={width < 600 ? '250px' : '800px'} height='3px' color='blue' className='secondBreakLine'/>
+        <Line width={width < 1200 ? '300px' : '800px'} height='3px' color='blue' className='secondBreakLine'/>
       </div>
-      <Line width={width < 600 ? '250px' : '800px'} height='3px' color='blue' className='secondBreakLine'/>
       <div className="home__thirdRow" ref={refThirdRow}>
           <div className={`home__thirdRow__content ${inViewThirdRow ? 'animate' : ''}`}>
           <h1>{t('benefits')}</h1>
@@ -111,6 +112,7 @@ const Home = () => {
           <BenefitComp icon={<GoodFitLogo/>} headLine={t('comfortableFittingHand')} description={t('comfortableFittingHandDescription')}/>
           </div>
         </div>
+        {width < 830 ? <MobileFooter /> : <Footer />}
     </div>
   );
 };

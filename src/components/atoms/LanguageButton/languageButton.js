@@ -26,11 +26,12 @@ export default function LanguageButton(props) {
 
   return (
     <>
-      <button type="button" className={"languageBtn"} onClick={changeLanguage} >
+      <button type="button" className={`languageBtn  languageBtn--${buttonType}`} onClick={changeLanguage} >
         <img
           src={i18n.language === 'en' ? ukFlag : roFlag}
           alt="languageFlag"
-          className={`languageBtn languageBtn--${buttonType}`}
+          className={`languageBtn`}
+          style={{ width: '2.5rem', height: '1.875rem'}}
         />
       </button>
     </>

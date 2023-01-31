@@ -11,14 +11,19 @@ import { RegionDropdown } from 'react-country-region-selector';
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslation } from "react-i18next";
 import { toast, ToastContainer } from 'react-toastify';
+import MobileHeader from "../../organisms/Nav/mobileHeader/mobileHeader";
+import MobileFooter from "../../organisms/Nav/footer/mobileFooter/mobileFooter";
+import Footer from "../../organisms/Nav/footer/desktopFooter/footer";
 
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
 import axios from "axios";
+import useWindowDimensions from "../../../functions/getWindowDimensions";
 const { getName } = require('country-list');
 
 export default function Order () {
+    const { height, width } = useWindowDimensions();
 
     const { t } = useTranslation();
 
@@ -136,7 +141,7 @@ export default function Order () {
     
     return (
         <div className="order">
-            <Nav />
+            {width < 992 ? <MobileHeader /> : <Nav />}
             <ToastContainer />
             <div className="order__body">
                 <div className="order__body__headline">
@@ -147,19 +152,19 @@ export default function Order () {
                         <SmallHeading content={t('contactInfo')} color='darkerBlue'/>
                         <div className="order__body__form__input">
                             <label>{t('firstName')}</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='firstName' isRequired={true}/>
+                            <InputField type='text' height='40px' width={width < 736 ? '300px' : '600px'} name='firstName' isRequired={true}/>
                         </div> 
                         <div className="order__body__form__input">
                             <label>{t('lastName')}</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='lastName' isRequired={true}/>
+                            <InputField type='text' height='40px' width={width < 736 ? '300px' : '600px'} name='lastName' isRequired={true}/>
                         </div>
                         <div className="order__body__form__input">
                             <label>{t('VAT')} (optional)</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='CUI' isRequired={true}/>
+                            <InputField type='text' height='40px' width={width < 736 ? '300px' : '600px'} name='CUI' isRequired={true}/>
                         </div>     
                         <div className="order__body__form__input">
                             <label>Email</label>   
-                            <InputField type='text' height='40px' width={'600px'} name='email' isRequired={true}/>
+                            <InputField type='text' height='40px' width={width < 736 ? '300px' : '600px'} name='email' isRequired={true}/>
                         </div>    
                         <PhoneInput
                             international
@@ -173,7 +178,7 @@ export default function Order () {
                         <SmallHeading content={t('orderQuantity')} color='darkerBlue'/>
                         <div className="order__body__form__input">
                         <label>{t('quantity')}</label>   
-                        <InputField type='number' height='40px' width={'600px'} name='quantity' isRequired={true}/>
+                        <InputField type='number' height='40px' width={width < 736 ? '300px' : '600px'} name='quantity' isRequired={true}/>
                         </div>
                     </div>
                     <div className="order__body__form__address">
@@ -196,21 +201,21 @@ export default function Order () {
                     <div className="order__body__form__address--secondRow"> 
                     <div className="order__body__form__input">
                         <label>{t('city')}</label>   
-                        <InputField type='text' height='40px' width={'290px'} name='localitate' isRequired={true}/>
+                        <InputField type='text' height='40px' width={width < 736 ? '300px' : '290px'} name='localitate' isRequired={true}/>
                     </div> 
                     <div className="order__body__form__input">
                         <label>{t('postalCode')}</label>   
-                        <InputField type='number' height='40px' width={'290px'} name='codPostal' isRequired={true}/>
+                        <InputField type='number' height='40px' width={width < 736 ? '300px' : '290px'} name='codPostal' isRequired={true}/>
                     </div> 
                     </div>
                     <div className="order__body__form__address--thirdRow"> 
                     <div className="order__body__form__input">
                     <label>{t('address1')}</label>   
-                        <InputField type='text' height='40px' width={'623px'} name='address1' isRequired={true}/>
+                        <InputField type='text' height='40px' width={width < 736 ? '300px' : '623px'} name='address1' isRequired={true}/>
                     </div> 
                     <div className="order__body__form__input">
                         <label>{t('address2')}</label>   
-                        <InputField type='text' height='40px' width={'623px'} name='address2' isRequired={true}/>
+                        <InputField type='text' height='40px' width={width < 736 ? '300px' : '623px'} name='address2' isRequired={true}/>
                     </div> 
                     </div>
                     </div>
@@ -223,6 +228,7 @@ export default function Order () {
                     </div>
                 </form>
             </div>
+            {width < 830 ? <MobileFooter /> : <Footer />}
         </div>
     )
 }
